@@ -18,7 +18,8 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&amp;display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://admin.pixelstrap.com/cuba/assets/css/fontawesome.css">
+    <!-- <link rel="stylesheet" type="text/css" href="https://admin.pixelstrap.com/cuba/assets/css/fontawesome.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- ico-font-->
     <link rel="stylesheet" type="text/css" href="https://admin.pixelstrap.com/cuba/assets/css/vendors/icofont.css">
     <!-- Themify icon-->

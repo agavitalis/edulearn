@@ -25,7 +25,7 @@
                     </div>
                 </li>
                 <li class="sidebar-list">
-                    <label class="badge badge-success">2</label><a class="sidebar-link sidebar-title" href="#"><i
+                    <a class="sidebar-link sidebar-title" href="#"><i
                             data-feather="home"></i><span class="lan-3">Dashboard </span></a>
                     <ul class="sidebar-submenu">
                         <li><a class="lan-4" href="index.html">Default</a></li>
@@ -39,7 +39,7 @@
                     </div>
                 </li>
                 <li class="sidebar-list">
-                    <label class="badge badge-success">*</label><a class="sidebar-link sidebar-title" href="#"><i
+                  <a class="sidebar-link sidebar-title" href="#"><i
                             data-feather="gift"></i><span class="lan-3">Scholarships </span></a>
                     <ul class="sidebar-submenu">
                         <li><a class="lan-4" href="index.html">Avalible Scholarships</a></li>
@@ -53,7 +53,7 @@
                     </div>
                 </li>
                 <li class="sidebar-list">
-                    <label class="badge badge-success">*</label><a class="sidebar-link sidebar-title" href="#"><i
+                   <a class="sidebar-link sidebar-title" href="#"><i
                             data-feather="file-text"></i><span class="lan-3">Exams </span></a>
                     <ul class="sidebar-submenu">
                         <li><a class="lan-4" href="index.html">My Exams</a></li>

@@ -26,16 +26,8 @@ class AppServiceProvider extends ServiceProvider
     {
         
         //forces assets() to use HTTPS on production
-        // if(config('app.env') === 'production') {
-        //     \URL::forceScheme('https');
-        // }
-
-        // if($this->app->environment('production')) {
-        //     \URL::forceScheme('https');
-        // }
-
-        if (env('APP_ENV') !== 'local') {
-            $url->forceScheme('https');
+        if(config('app.env') === 'production') {
+            \URL::forceScheme('https');
         }
 
         //sets default sttring length to 191

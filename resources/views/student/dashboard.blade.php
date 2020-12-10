@@ -72,42 +72,7 @@
                 </div>
                 <div class="left-header col horizontal-wrapper pl-0">
                     <ul class="horizontal-menu">
-                        <li class="mega-menu outside"><a class="nav-link" href="#!"><i
-                                    data-feather="layers"></i><span>Bonus Ui</span></a>
-                            <div class="mega-menu-container nav-submenu menu-to-be-close">
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col mega-box">
-                                            <div class="mobile-title d-none">
-                                                <h5>Mega menu</h5><i data-feather="x"></i>
-                                            </div>
-                                            <div class="link-section icon">
-                                                <div>
-                                                    <h6>Error Page</h6>
-                                                </div>
-                                                <ul>
-                                                    <li><a href="error-400.html">Error page 400</a></li>
-                                                   
-                                                </ul>
-                                            </div>
-                                        </div>
-
-                                        <div class="col mega-box">
-                                            <div class="link-section">
-                                                <div>
-                                                    <h6>Email templates</h6>
-                                                </div>
-                                                <ul>
-                                                    <li class="pl-0"><a href="basic-template.html">Basic Email</a></li>
-                                                    
-                                                </ul>
-                                            </div>
-                                        </div>
-                                       
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
+                        
                         <li class="level-menu outside"><a class="nav-link" href="#!"><i
                                     data-feather="inbox"></i><span>Quick Menu</span></a>
                             <ul class="header-level-menu menu-to-be-close">
@@ -208,49 +173,7 @@
         <!-- Page Body Start-->
         <div class="page-body-wrapper sidebar-icon">
             <!-- Page Sidebar Start-->
-            <div class="sidebar-wrapper">
-                <div class="logo-wrapper"><a href="index.html"><img class="img-fluid for-light"
-                            src="https://admin.pixelstrap.com/cuba/assets/images/logo/logo.png" alt=""><img
-                            class="img-fluid for-dark"
-                            src="https://admin.pixelstrap.com/cuba/assets/images/logo/logo_dark.png" alt=""></a>
-                    <div class="back-btn"><i class="fa fa-angle-left"></i></div>
-                    <div class="toggle-sidebar"><i class="status_toggle middle sidebar-toggle" data-feather="grid"> </i>
-                    </div>
-                </div>
-                <div class="logo-icon-wrapper"><a href="index.html"><img class="img-fluid"
-                            src="https://admin.pixelstrap.com/cuba/assets/images/logo/logo-icon.png" alt=""></a></div>
-                <nav class="sidebar-main">
-                    <div class="left-arrow" id="left-arrow"><i data-feather="arrow-left"></i></div>
-                    <div id="sidebar-menu">
-                        <ul class="sidebar-links custom-scrollbar">
-                            <li class="back-btn"><a href="index.html"><img class="img-fluid"
-                                        src="https://admin.pixelstrap.com/cuba/assets/images/logo/logo-icon.png"
-                                        alt=""></a>
-                                <div class="mobile-back text-right"><span>Back</span><i class="fa fa-angle-right pl-2"
-                                        aria-hidden="true"></i></div>
-                            </li>
-                            <li class="sidebar-main-title">
-                                <div>
-                                    <h6 class="lan-1">General</h6>
-                                    <p class="lan-2">Dashboards,widgets & layout.</p>
-                                </div>
-                            </li>
-                            <li class="sidebar-list">
-                                <label class="badge badge-success">2</label><a class="sidebar-link sidebar-title"
-                                    href="#"><i data-feather="home"></i><span class="lan-3">Dashboard </span></a>
-                                <ul class="sidebar-submenu">
-                                    <li><a class="lan-4" href="index.html">Default</a></li>
-                                    <li><a class="lan-5" href="dashboard-02.html">Ecommerce</a></li>
-                                </ul>
-                            </li>
-                           
-                          
-                            
-                        </ul>
-                    </div>
-                    <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>
-                </nav>
-            </div>
+           @include("partials/appp/sidebar")
             <!-- Page Sidebar Ends-->
             <div class="page-body">
                 <div class="container-fluid">
@@ -415,92 +338,57 @@
 
                 <div class="container-fluid">
                     <div class="row second-chart-list third-news-update">
-
-
-                        <div class="col-xl-10 xl-60">
-                            <div class="row">
-
-                                <div class="col-xl-4 xl-50 col-sm-6 box-col-6">
-                                    <div class="card">
-                                        <div class="blog-box blog-grid text-center product-box">
-                                            <div class="product-img"><img class="img-fluid top-radius-blog"
-                                                    src="https://admin.pixelstrap.com/cuba/assets/images/faq/3.jpg"
-                                                    alt="">
-                                                <div class="product-hover">
-                                                    <ul>
-                                                        <li><i class="icon-link"></i></li>
-                                                        <li><i class="icon-import"></i></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="blog-details-main">
-                                                <ul class="blog-social">
-                                                    <li>9 April 2018</li>
-                                                    <li>by: Admin</li>
-                                                    <li>0 Hits</li>
-                                                </ul>
-                                                <hr>
-                                                <h6 class="blog-bottom-details">Perspiciatis unde omnis iste natus error
-                                                    sit.Dummy text</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 xl-50 col-sm-6 box-col-6">
-                                    <div class="card">
-                                        <div class="blog-box blog-grid text-center product-box">
-                                            <div class="product-img"><img class="img-fluid top-radius-blog"
-                                                    src="https://admin.pixelstrap.com/cuba/assets/images/faq/1.jpg"
-                                                    alt="">
-                                                <div class="product-hover">
-                                                    <ul>
-                                                        <li><i class="icon-link"></i></li>
-                                                        <li><i class="icon-import"></i></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="blog-details-main">
-                                                <ul class="blog-social">
-                                                    <li>9 April 2018</li>
-                                                    <li>by: Admin</li>
-                                                    <li>0 Hits</li>
-                                                </ul>
-                                                <hr>
-                                                <h6 class="blog-bottom-details">Perspiciatis unde omnis iste natus error
-                                                    sit.Dummy text</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 xl-50 col-sm-6 box-col-6">
-                                    <div class="card">
-                                        <div class="blog-box blog-grid text-center product-box">
-                                            <div class="product-img"><img class="img-fluid top-radius-blog"
-                                                    src="https://admin.pixelstrap.com/cuba/assets/images/faq/4.jpg"
-                                                    alt="">
-                                                <div class="product-hover">
-                                                    <ul>
-                                                        <li><i class="icon-link"></i></li>
-                                                        <li><i class="icon-import"></i></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="blog-details-main">
-                                                <ul class="blog-social">
-                                                    <li>9 April 2018</li>
-                                                    <li>by: Admin</li>
-                                                    <li>0 Hits</li>
-                                                </ul>
-                                                <hr>
-                                                <h6 class="blog-bottom-details">Perspiciatis unde omnis iste natus error
-                                                    sit.Dummy text</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                
+                    <div class="col-xl-12 xl-60">
+                <div class="row">
+                  <div class="col-xl-6">
+                    <div class="card">
+                      <div class="blog-box blog-list row">
+                        <div class="col-sm-5"><img class="img-fluid sm-100-w" src="https://admin.pixelstrap.com/cuba/assets/images/faq/1.jpg" alt=""></div>
+                        <div class="col-sm-7">
+                          <div class="blog-details">
+                            <div class="blog-date"><span>05</span> January 2019</div>
+                            <h6>Java Language </h6>
+                            <div class="blog-bottom-content">
+                              <ul class="blog-social">
+                                <li>by: Paige Turner</li>
+                                <li>15 Hits</li>
+                              </ul>
+                              <hr>
+                              <p class="mt-0">inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit.</p>
                             </div>
+                          </div>
                         </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-6">
+                    <div class="card">
+                      <div class="blog-box blog-list row">
+                        <div class="col-sm-5"><img class="img-fluid sm-100-w" src="https://admin.pixelstrap.com/cuba/assets/images/faq/2.jpg" alt=""></div>
+                        <div class="col-sm-7">
+                          <div class="blog-details">
+                            <div class="blog-date"><span>10</span> March 2019</div>
+                            <h6>Web Development </h6>
+                            <div class="blog-bottom-content">
+                              <ul class="blog-social">
+                                <li>by: Petey Cruiser</li>
+                                <li>34 Hits</li>
+                              </ul>
+                              <hr>
+                              <p class="mt-0">inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  
+                </div>
+              </div>
+
+
+                       
 
 
                     </div>
@@ -551,7 +439,7 @@
     <script src="https://admin.pixelstrap.com/cuba/assets/js/tooltip-init.js"></script>
     <!-- Plugins JS Ends-->
     <!-- Theme js-->
-    <script src="https://admin.pixelstrap.com/cuba/assets/js/script.js"></script>
+    <!-- <script src="https://admin.pixelstrap.com/cuba/assets/js/script.js"></script> -->
     <!-- <script src="https://admin.pixelstrap.com/cuba/assets/js/theme-customizer/customizer.js"></script> -->
     <!-- login js-->
     <!-- Plugin used-->

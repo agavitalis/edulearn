@@ -11,33 +11,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon -->
     <link rel="apple-touch-icon" href="apple-touch-icon.html">
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('appp/images/fav.png') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="../appp/images/fav.png">
     <!-- bootstrap v4 css -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('appp/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="../appp/css/bootstrap.min.css">
     <!-- font-awesome css -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('appp/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="../appp/css/font-awesome.min.css')}}">
     <!-- animate css -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('appp/css/animate.css') }}">
+    <link rel="stylesheet" type="text/css" href="../appp/css/animate.css">
     <!-- owl.carousel css -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('appp/css/owl.carousel.css') }}">
+    <link rel="stylesheet" type="text/css" href="../appp/css/owl.carousel.css">
     <!-- slick css -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('appp/css/slick.css') }}">
+    <link rel="stylesheet" type="text/css" href="../appp/css/slick.css">
     <!-- rsmenu CSS -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('appp/css/rsmenu-main.css') }}">
+    <link rel="stylesheet" type="text/css" href="../appp/css/rsmenu-main.css">
     <!-- rsmenu transitions CSS -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('appp/css/rsmenu-transitions.css') }}">
+    <link rel="stylesheet" type="text/css" href="../appp/css/rsmenu-transitions.css">
     <!-- magnific popup css -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('appp/css/magnific-popup.css') }}">
+    <link rel="stylesheet" type="text/css" href="../appp/css/magnific-popup.css">
     <!-- flaticon css  -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('appp/fonts/flaticon.css') }}">
+    <link rel="stylesheet" type="text/css" href="../appp/fonts/flaticon.css">
     <!-- flaticon2 css  -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('appp/fonts/fonts2/flaticon.css') }}">
+    <link rel="stylesheet" type="text/css" href="../appp/fonts/fonts2/flaticon.css">
     <!-- Offcanvas CSS -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('appp/css/off-canvas.css') }}">
+    <link rel="stylesheet" type="text/css" href="../appp/css/off-canvas.css">
     <!-- style css -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('appp/css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="../appp/css/style.css">
     <!-- responsive css -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('appp/css/responsive.css') }}">
+    <link rel="stylesheet" type="text/css" href="../appp/css/responsive.css">
 
 </head>
 
@@ -93,7 +93,7 @@
                     <div class="row">
                         <div class="col-lg-4 col-md-12">
                             <div class="logo-area">
-                                <a href="index.html"><img src="{{ asset('appp/images/logo.png') }}" alt="logo"></a>
+                                <a href="index.html"><img src="../appp/images/logo.png" alt="logo"></a>
                             </div>
                         </div>
                         <div class="col-lg-8 col-md-12">
@@ -149,7 +149,7 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <!-- <div id="logo-sticky" class="text-center">
-										<a href="index.html"><img src="{{ asset('appp/images/logo.png') }}" alt="logo"></a>
+										<a href="index.html"><img src="../appp/images/logo.png" alt="logo"></a>
 									</div> -->
                                 <a class="rs-menu-toggle"><i class="fa fa-bars"></i>Menu</a>
                                 <nav class="rs-menu">
@@ -251,7 +251,7 @@
                 <div class="row">
                     <div class="col-lg-3 col-md-12">
                         <div class="about-widget">
-                            <img src="{{ asset('appp/images/logo-footer.png') }}" alt="Footer Logo">
+                            <img src="../appp/images/logo-footer.png" alt="Footer Logo">
                             <p>We create Premium Html Themes for more than three years. Our team goal is to reunite the
                                 elegance of unique.</p>
                             <p class="margin-remove">We create Unique and Easy To Use Flexible Html Themes.</p>
@@ -312,17 +312,17 @@
                     <div class="col-lg-3 col-md-12">
                         <h3 class="footer-title">FLICKR FEED</h3>
                         <ul class="flickr-feed">
-                            <li><a href="#"><img src="{{ asset('appp/images/flickr/1.jpg') }}" alt="Project Image"></a>
+                            <li><a href="#"><img src="../appp/images/flickr/1.jpg" alt="Project Image"></a>
                             </li>
-                            <li><a href="#"><img src="{{ asset('appp/images/flickr/2.jpg') }}" alt="Project Image"></a>
+                            <li><a href="#"><img src="../appp/images/flickr/2.jpg" alt="Project Image"></a>
                             </li>
-                            <li><a href="#"><img src="{{ asset('appp/images/flickr/3.jpg') }}" alt="Project Image"></a>
+                            <li><a href="#"><img src="../appp/images/flickr/3.jpg" alt="Project Image"></a>
                             </li>
-                            <li><a href="#"><img src="{{ asset('appp/images/flickr/4.jpg') }}" alt="Project Image"></a>
+                            <li><a href="#"><img src="../appp/images/flickr/4.jpg" alt="Project Image"></a>
                             </li>
-                            <li><a href="#"><img src="{{ asset('appp/images/flickr/5.jpg') }}" alt="Project Image"></a>
+                            <li><a href="#"><img src="../appp/images/flickr/5.jpg" alt="Project Image"></a>
                             </li>
-                            <li><a href="#"><img src="{{ asset('appp/images/flickr/6.jpg') }}" alt="Project Image"></a>
+                            <li><a href="#"><img src="../appp/images/flickr/6.jpg" alt="Project Image"></a>
                             </li>
                         </ul>
                     </div>
@@ -359,7 +359,7 @@
     <nav class="right_menu_togle">
         <div class="close-btn"><span id="nav-close" class="text-center">x</span></div>
         <div class="canvas-logo">
-            <a href="index.html"><img src="{{ asset('appp/images/logo-white.png') }}" alt="logo"></a>
+            <a href="index.html"><img src="../appp/images/logo-white.png" alt="logo"></a>
         </div>
         <ul class="sidebarnav_menu list-unstyled main-menu">
             <!--Home Menu Start-->
@@ -462,32 +462,32 @@
 
 
     <!-- modernizr js -->
-    <script src="{{ asset('appp/js/modernizr-2.8.3.min.js') }}"></script>
+    <script src="../appp/js/modernizr-2.8.3.min.js"></script>
     <!-- jquery latest version -->
-    <script src="{{ asset('appp/js/jquery.min.js') }}"></script>
+    <script src="../appp/js/jquery.min.js"></script>
     <!-- bootstrap js -->
-    <script src="{{ asset('appp/js/bootstrap.min.js') }}"></script>
+    <script src="../appp/js/bootstrap.min.js"></script>
     <!-- owl.carousel js -->
-    <script src="{{ asset('appp/js/owl.carousel.min.js') }}"></script>
+    <script src="../appp/js/owl.carousel.min.js"></script>
     <!-- slick.min js -->
-    <script src="{{ asset('appp/js/slick.min.js') }}"></script>
+    <script src="../appp/js/slick.min.js"></script>
     <!-- isotope.pkgd.min js -->
-    <script src="{{ asset('appp/js/isotope.pkgd.min.js') }}"></script>
+    <script src="../appp/js/isotope.pkgd.min.js"></script>
     <!-- imagesloaded.pkgd.min js -->
-    <script src="{{ asset('appp/js/imagesloaded.pkgd.min.js') }}"></script>
+    <script src="../appp/js/imagesloaded.pkgd.min.js"></script>
     <!-- wow js -->
-    <script src="{{ asset('appp/js/wow.min.js') }}"></script>
+    <script src="../appp/js/wow.min.js"></script>
     <!-- counter top js -->
-    <script src="{{ asset('appp/js/waypoints.min.js') }}"></script>
-    <script src="{{ asset('appp/js/jquery.counterup.min.js') }}"></script>
+    <script src="../appp/js/waypoints.min.js"></script>
+    <script src="../appp/js/jquery.counterup.min.js"></script>
     <!-- magnific popup -->
-    <script src="{{ asset('appp/js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="../appp/js/jquery.magnific-popup.min.js"></script>
     <!-- rsmenu js -->
-    <script src="{{ asset('appp/js/rsmenu-main.js') }}"></script>
+    <script src="../appp/js/rsmenu-main.js"></script>
     <!-- plugins js -->
-    <script src="{{ asset('appp/js/plugins.js') }}"></script>
+    <script src="../appp/js/plugins.js"></script>
     <!-- main js -->
-    <script src="{{ asset('appp/js/main.js') }}"></script>
+    <script src="../appp/js/main.js"></script>
 </body>
 
 </html>

@@ -26,12 +26,5 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        //forces assets() to use HTTPS on production
-        if(config('app.env') === 'production') {
-            \URL::forceScheme('https');
-        }
-
-        //sets default sttring length to 191
-        Schema::defaultStringLength(191);
     }
 }

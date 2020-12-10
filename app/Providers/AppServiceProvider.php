@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Routing\UrlGenerator;
 use Illuminate\Support\Facades\Schema;
 class AppServiceProvider extends ServiceProvider
 {
@@ -29,8 +30,12 @@ class AppServiceProvider extends ServiceProvider
         //     \URL::forceScheme('https');
         // }
 
-        if($this->app->environment('production')) {
-            \URL::forceScheme('https');
+        // if($this->app->environment('production')) {
+        //     \URL::forceScheme('https');
+        // }
+
+        if (env('APP_ENV') !== 'local') {
+            $url->forceScheme('https');
         }
 
         //sets default sttring length to 191

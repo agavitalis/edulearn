@@ -15,7 +15,7 @@
     <!-- bootstrap v4 css -->
     <link rel="stylesheet" type="text/css" href="../appp/css/bootstrap.min.css">
     <!-- font-awesome css -->
-    <link rel="stylesheet" type="text/css" href="../appp/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="../appp/css/font-awesome.min.css">
     <!-- animate css -->
     <link rel="stylesheet" type="text/css" href="../appp/css/animate.css">
     <!-- owl.carousel css -->

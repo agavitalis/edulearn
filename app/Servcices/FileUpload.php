@@ -12,9 +12,7 @@ class FileUpload
         $extension = $request->file($file_name)->getClientOriginalExtension();
         $new_name = round(microtime(true)) . '.' . $extension;
         
-        $request->file($file_name)->storeAs(
-            'public/uploads', $new_name
-        );
+        $request->file($file_name)->storeAs('public/uploads', $new_name );
 
         return $new_name;
     }

@@ -2,21 +2,25 @@
 
 namespace App\Imports;
 
+use App\Models\Exam;
 use App\Models\Question;
-use Maatwebsite\Excel\Concerns\ToModel;
+use Illuminate\Support\Collection;
+use Maatwebsite\Excel\Concerns\ToCollection;
 use Maatwebsite\Excel\Concerns\WithHeadingRow;
+use Maatwebsite\Excel\Concerns\Importable;
 
-class QuestionsImport implements ToModel,WithHeadingRow
+class QuestionsImport implements ToCollection,WithHeadingRow
 {
+
+    use Importable;
+
     /**
     * @param array $row
     *
     * @return \Illuminate\Database\Eloquent\Model|null
     */
-    public function model(array $row)
+    public function collection(Collection $rows)
     {
-        return new Question([
-            //
-        ]);
+        ///
     }
 }

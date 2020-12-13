@@ -5,6 +5,9 @@ namespace App\Repositories;
 use App\Repositories\Interfaces\QuestionRepositoryInterface; 
 use App\Models\Question;   
 use Illuminate\Http\Request;
+use App\Imports\QuestionsImport;
+use App\Models\Exam;
+use Maatwebsite\Excel\Facades\Excel;
 
 
 
@@ -31,15 +34,21 @@ class QuestionRepository implements QuestionRepositoryInterface
     */
     public function uploadQuestions(Request $request)
     {
-        
-        $exam = Question::create([
-            'name' => $request->name,
-            'duration' => $request->duration,
-            'description' => $request->description,
-            'instruction' => $request->instruction,
-            'category' => $request->category,
-        ]);  
-        return $exam;
+       
+
+        $collection = (new QuestionsImport)->toCollection(request()->file('questions'));
+        foreach($collection[0] as $row){
+
+            Question::create([
+                'question' => $row['question'],
+                'option_a' => $row['option_a'],
+                'option_b' => $row['option_b'],
+                'option_c' => $row['option_c'],
+                'option_d' => $row['option_d'],
+                'answer' => $row['answer'],
+                'exam_id' => $request->exam
+            ]);
+        }
     }
  
     /**

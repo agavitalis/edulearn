@@ -3,10 +3,12 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use App\Repositories\Interfaces\ScholarshipRepositoryInterface; 
-use App\Repositories\ScholarshipRepository; 
-use App\Repositories\Interfaces\ExamRepositoryInterface; 
-use App\Repositories\ExamRepository; 
+use App\Repositories\Interfaces\ScholarshipRepositoryInterface;
+use App\Repositories\ScholarshipRepository;
+use App\Repositories\Interfaces\ExamRepositoryInterface;
+use App\Repositories\ExamRepository;
+use App\Repositories\Interfaces\QuestionRepositoryInterface;
+use App\Repositories\QuestionRepository;
 
 class RepositoryServiceProvider extends ServiceProvider
 {
@@ -19,6 +21,7 @@ class RepositoryServiceProvider extends ServiceProvider
     {
         $this->app->bind(ScholarshipRepositoryInterface::class, ScholarshipRepository::class);
         $this->app->bind(ExamRepositoryInterface::class, ExamRepository::class);
+        $this->app->bind(QuestionRepositoryInterface::class, QuestionRepository::class);
     }
 
     /**

@@ -27,6 +27,7 @@
                     <div class="card-header">
                         <h5>Upload an Exam Question</h5><span>To Create a new exam, download our sample excel sheet and format your question using that format</span>
                     </div>
+                    @include('partials.admin.alert')
                     <div class="card-body">
                         <form method="POST" action="{{ route('upload_questions') }}"  enctype="multipart/form-data">
                             @csrf

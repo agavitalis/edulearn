@@ -37,6 +37,7 @@
                                         <th>Exam Duration(Seconds)</th>
                                         <th>Exam Category</th>
                                         <th>Exam Status</th>
+                                        <th>Number of Questions</th>
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
@@ -47,6 +48,7 @@
                                         <td>{{$exam->duration}}</td>
                                         <td>{{ucfirst($exam->category)}}</td>
                                         <td>{{$exam->is_active == 1? "Active" : "Not Active" }}</td>
+                                        <td>{{$exam->questions->count()}}</td>
                                        
                                         <td>
                                             <div class="dropdown-basic">
@@ -81,6 +83,7 @@
                                         <th>Exam Duration(Seconds)</th>
                                         <th>Exam Category</th>
                                         <th>Exam Status</th>
+                                        <th>Number of Questions</th>
                                         <th>Actions</th>
                                     </tr>
                                 </tfoot>

@@ -19,7 +19,7 @@ class ScholarshipController extends Controller
     {
 
         if ($request->isMethod('GET')) {
-            return view('admin.register-scholarship');
+            return view('admin.scholarship.register-scholarship');
         }
 
         $response = $this->scholarshipRepository->createScholarship($request);
@@ -31,7 +31,7 @@ class ScholarshipController extends Controller
     public function manage_scholarships(Request $request)
     {
         $scholarships = $this->scholarshipRepository->getAllScholarships();
-        return view('admin.manage-scholarships', compact('scholarships'));
+        return view('admin.scholarship.manage-scholarships', compact('scholarships'));
     }
 
     public function manage_scholarships_exams(Request $request)

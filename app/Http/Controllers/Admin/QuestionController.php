@@ -26,7 +26,7 @@ class QuestionController extends Controller
         if ($request->isMethod('GET')) {
 
             $exams = $this->examRepository->getAllExams();
-            return view('admin.upload-questions', compact('exams'));
+            return view('admin.question.upload-questions', compact('exams'));
         }
 
 

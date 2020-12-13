@@ -19,7 +19,7 @@ class ExamController extends Controller
     public function create_exams(Request $request){
 
         if($request->isMethod('GET')){
-            return view('admin.create-exams');
+            return view('admin.exam.create-exams');
         }
 
         $response = $this->examRepository->createExam($request);
@@ -32,10 +32,14 @@ class ExamController extends Controller
     public function manage_exams(){
 
         $exams = $this->examRepository->getAllExams();
-        return view('admin.manage-exams', compact('exams'));
+        return view('admin.exam.manage-exams', compact('exams'));
     }
 
     public function exam_details(){
-        return view('admin.exam-details');
+        return view('admin.exam.exam-details');
+    }
+
+    public function exam_questions(){
+        return view('admin.exam.exam-questions');
     }
 }

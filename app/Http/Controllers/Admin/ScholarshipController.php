@@ -3,16 +3,19 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Scholarship;
 use Illuminate\Http\Request;
 use App\Repositories\Interfaces\ScholarshipRepositoryInterface;
-
+use App\Repositories\Interfaces\ExamRepositoryInterface;
 class ScholarshipController extends Controller
 {
     private $scholarshipRepository;
+    private $examRepository;
 
-    public function __construct(ScholarshipRepositoryInterface $scholarshipRepository)
+    public function __construct(ScholarshipRepositoryInterface $scholarshipRepository,ExamRepositoryInterface $examRepository)
     {
         $this->scholarshipRepository = $scholarshipRepository;
+        $this->examRepository = $examRepository;
     }
 
     public function register_scholarship(Request $request)
@@ -34,8 +37,26 @@ class ScholarshipController extends Controller
         return view('admin.scholarship.manage-scholarships', compact('scholarships'));
     }
 
-    public function manage_scholarships_exams(Request $request)
+    public function assign_exam_to_scholarship(Request $request)
     {
-        return view('admin.manage-scholarship-exams');
+        if($request->isMethod('GET')){
+
+            $scholarships = $this->scholarshipRepository->getAllActiveScholarships();
+            $exams = $this->examRepository->getAllActiveExams();
+            return view('admin.scholarship.assign-exam-to-scholarship', compact('scholarships','exams'));
+        }
+
+        $this->scholarshipRepository->assignExamToScholarship($request);
+        return back()->with('success','The selected Examination have been added to tthis scholarship');
+
+    }
+
+    public function manage_assignments(Request $request){
+
+        if($request->isMethod('GET')){
+            $scholarships =  $this->scholarshipRepository->examAssignedToScholarships();
+            return view('admin.scholarship.manage-exam-assigned-to-scholarship',compact('scholarships'));
+        }
+
     }
 }

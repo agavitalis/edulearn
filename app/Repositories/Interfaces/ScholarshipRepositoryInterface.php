@@ -31,4 +31,16 @@ interface ScholarshipRepositoryInterface
     * @param $scholarship_id
     */
    public function getScholarship($scholarship_id);
+
+   /**
+    * Adding an Exam to a Scholarship
+    *@param Request 
+    */
+    public function assignExamToScholarship(Request $request);
+
+    /**
+    * get Scholarships and the exams attached
+    */
+    public function examAssignedToScholarships();
+   
 }

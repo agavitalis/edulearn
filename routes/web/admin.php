@@ -20,15 +20,18 @@ Route::group(['prefix' => 'admin','namespace'=>"Admin"], function()
     ->middleware('guest')
     ->name('register-scholarship');
 
-
     Route::get('/manage-scholarships', [ScholarshipController::class, 'manage_scholarships'])
     ->middleware('guest')
     ->name('manage-scholarships');
 
-    Route::get('/manage-scholarship-exams', [ScholarshipController::class, 'manage_scholarships_exams'])
+    Route::match(['GET','POST'],'/assign-exam-to-scholarship', [ScholarshipController::class, 'assign_exam_to_scholarship'])
     ->middleware('guest')
-    ->name('manage-scholarship-exams');
+    ->name('assign_exam_to_scholarship');
 
+    Route::match(['GET','POST'],'/manage-assignments', [ScholarshipController::class, 'manage_assignments'])
+    ->middleware('guest')
+    ->name('manage_assignments');
+   
     Route::match(['GET','POST'],'/create-an-exam', [ExamController::class, 'create_exams'])
     ->middleware('guest')
     ->name('create_exams');

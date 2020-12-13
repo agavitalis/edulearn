@@ -26,7 +26,7 @@
                 </li>
                 
                 <li class="sidebar-list">
-                    <a class="sidebar-link" href="#"><i
+                    <a class="sidebar-link" href="dashboard"><i
                             data-feather="home"></i><span>Dashboard </span></a>
                 </li>
                 <li class="sidebar-main-title">
@@ -47,8 +47,8 @@
                   <a class="sidebar-link sidebar-title" href="#"><i
                             data-feather="git-pull-request"></i><span class="lan-3">Configuration </span></a>
                     <ul class="sidebar-submenu">
-                        <li><a class="lan-4" href="register-scholarship">Add Exam to Scholarship</a></li>
-                        <li><a class="lan-5" href="manage-scholarships">Manage Assignments</a></li>
+                        <li><a class="lan-4" href="assign-exam-to-scholarship">Assign Exam to a Scholarship</a></li>
+                        <li><a class="lan-5" href="manage-assignments">Manage Assignments</a></li>
                     </ul>
                 </li>
                 <li class="sidebar-list">

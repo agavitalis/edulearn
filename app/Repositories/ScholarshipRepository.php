@@ -4,6 +4,7 @@ namespace App\Repositories;
 
 use App\Repositories\Interfaces\ScholarshipRepositoryInterface; 
 use App\Models\Scholarship;   
+use App\Models\ExamScholarship;   
 use Illuminate\Http\Request;
 
 
@@ -51,4 +52,26 @@ class ScholarshipRepository implements ScholarshipRepositoryInterface
     {
         return Scholarship::find($scholarship_id);
     }
+
+    /**
+    * @param array $attributes
+    */
+    public function assignExamToScholarship(Request $request)
+    {
+        
+        return ExamScholarship::create([
+            'exam_id' => $request->exam_id,
+            'scholarship_id' => $request->scholarship_id,
+        ]);  
+        
+    }
+
+     /**
+    * @param array $attributes
+    */
+    public function examAssignedToScholarships()
+    {
+        return Scholarship::all();
+    }
+ 
 }

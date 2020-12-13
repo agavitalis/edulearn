@@ -21,4 +21,12 @@ class Scholarship extends Model
         'is_active',
     ];
 
+    /**
+     * The exams that belong to the scholarship.
+     */
+    public function exams()
+    {
+        return $this->belongsToMany(Exam::class,'exam_scholarship');
+    }
+
 }

@@ -23,4 +23,11 @@ class Exam extends Model
         return $this->hasMany(Question::class);
     }
     
+    /**
+     * The scholarships that belong to the exam.
+     */
+    public function scholarships()
+    {
+        return $this->belongsToMany(Scholarship::class,'exam_scholarship');
+    }
 }

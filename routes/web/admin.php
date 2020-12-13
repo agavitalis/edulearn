@@ -2,7 +2,8 @@
 
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\ScholarshipController;
-use App\Http\Controllers\Admin\ExaminationController;
+use App\Http\Controllers\Admin\QuestionController;
+use App\Http\Controllers\Admin\ExamController;
 use Illuminate\Support\Facades\Route;
 
 Route::group(['prefix' => 'admin','namespace'=>"Admin"], function()  
@@ -15,6 +16,11 @@ Route::group(['prefix' => 'admin','namespace'=>"Admin"], function()
     ->middleware('guest')
     ->name('register-scholarship');
 
+    Route::post('/register-scholarship', [ScholarshipController::class, 'register_scholarship'])
+    ->middleware('guest')
+    ->name('register-scholarship');
+
+
     Route::get('/manage-scholarships', [ScholarshipController::class, 'manage_scholarships'])
     ->middleware('guest')
     ->name('manage-scholarships');
@@ -23,16 +29,20 @@ Route::group(['prefix' => 'admin','namespace'=>"Admin"], function()
     ->middleware('guest')
     ->name('manage-scholarship-exams');
 
-    Route::get('/create-an-exam', [ExaminationController::class, 'create_exams'])
+    Route::match(['GET','POST'],'/create-an-exam', [ExamController::class, 'create_exams'])
     ->middleware('guest')
     ->name('create_exams');
 
-    Route::get('/manage-examinations', [ExaminationController::class, 'manage_exams'])
+    Route::get('/manage-examinations', [ExamController::class, 'manage_exams'])
     ->middleware('guest')
     ->name('manage_examinations');
 
-    Route::get('/exam-details/{id?}', [ExaminationController::class, 'exam_details'])
+    Route::get('/exam-details/{id?}', [ExamController::class, 'exam_details'])
     ->middleware('guest')
     ->name('exam_details');
+
+    Route::match(['GET','POST'],'/upload-questions', [QuestionController::class, 'upload_questions'])
+    ->middleware('guest')
+    ->name('upload_questions');
 
 });

@@ -5,20 +5,22 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Scholarship extends Model
+class Exam extends Model
 {
     use HasFactory;
 
     protected $fillable = [
         'name',
+        'duration',
         'description',
-        'start_date',
-        'end_date',
-        'cover_picture',
-        'category',
-        'application_fee',
+        'instruction',
         'category',
         'is_active',
     ];
 
+    public function questions()
+    {
+        return $this->hasMany(Question::class);
+    }
+    
 }

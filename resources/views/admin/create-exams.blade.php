@@ -27,23 +27,37 @@
                     <div class="card-header">
                         <h5>Create a new Examination</h5><span>To Create a new exam, download our sample excel sheet and format your question using that format</span>
                     </div>
+                    @include('partials.admin.alert')
                     <div class="card-body">
-                        <form>
+                        <form method="POST" action="{{ route('create_exams') }}">
+                            @csrf
                             <div class="row">
                                 <div class="col-md-12 mb-3">
                                     <label for="validationCustom01">Exam Name</label>
                                     <input class="form-control" type="text"
-                                        placeholder="Scholarship Name" required="">
+                                        name="name" placeholder="Exam Name" required="">
                                 </div>
                                 
                             </div>
                             
                             <div class="row">
-                                <div class="col-md-12 mb-3">
+                                <div class="col-md-6 mb-3">
                                     <label for="">Exam Time Duration in Seconds</label>
                                     <input class="form-control" id="" type="number" placeholder="Exam Duration"
-                                        required="">
+                                        name="duration" required="">
                                     
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <label for="validationCustom01">This Exam is for?</label>
+            
+                                    <select class="form-control" name="category">
+                                    
+                                        <option value="university">University Students</option>
+                                        <option value="secondary">Secondary School Students</option>
+                                    
+                                    </select>
+
                                 </div>
                     
                                
@@ -62,27 +76,16 @@
                                 <div class="col-md-12 mb-3">
                                    <label for="">Instructions To Students taking this exam</label>
                                    <div class="border border-dark" >
-                                        <textarea class="form-control" id="editor2" name="description" cols="30" rows="10"> </textarea>
+                                        <textarea class="form-control" id="editor2" name="instruction" cols="30" rows="10"> </textarea>
                                    </div>
                                    
                                 </div>
                             </div>
 
-                            <div class="row">
-                                <div class="col-md-12 mb-3">
-                                    <label for="">Upload Questions<small>Questions should be in CSV or Excel</small></label>
-                                    <input class="form-control" id="" type="file" required="">
-                                    <small>Don't have an upload file? Download one here</small>
-                                    
-                                </div>
-                    
-                               
-                            </div>
-                           
                             <hr>
                             <div class="form-group text-right">
-                                <button type="button" class="btn btn-outline-info" value="">Download Sample Upload Template File</button>
-                                <button type="button" class="btn btn-primary " value="">Create Exam</button>
+                        
+                                <button type="submit" class="btn btn-primary " value="">Create Exam</button>
                             </div> 
                             
                         </form>

@@ -27,13 +27,15 @@
                     <div class="card-header">
                         <h5>Register a new Scholarship</h5><span>Setup a new Scholarship here, fill out the forms with a short description about this scholarship</span>
                     </div>
+                    @include('partials.admin.alert')
                     <div class="card-body">
-                        <form>
+                        <form method="POST" action="{{ route('register-scholarship') }}">
+                            @csrf
                             <div class="row">
                                 <div class="col-md-12 mb-3">
                                     <label for="validationCustom01">Scholarship Name</label>
                                     <input class="form-control" type="text"
-                                        placeholder="Scholarship Name" required="">
+                                        name="name" placeholder="Scholarship Name" required="">
                                 </div>
                                 
                             </div>
@@ -41,10 +43,10 @@
                                 <div class="col-md-6 mb-3">
                                     <label for="validationCustom01">This Scholarship is for?</label>
             
-                                    <select class="form-control">
+                                    <select class="form-control" name="category">
                                     
-                                        <option value="AL">University Students</option>
-                                        <option value="WY">Secondary School Students</option>
+                                        <option value="university">University Students</option>
+                                        <option value="secondary">Secondary School Students</option>
                                     
                                     </select>
 
@@ -52,7 +54,7 @@
                                 <div class="col-md-6 mb-3">
                                     <label for="validationCustom01">Application Fee for this Scholarship</label>
                                     <input class="form-control" type="number"
-                                        placeholder="Scholarship Application Fee" required="">
+                                        name="application_fee" placeholder="Scholarship Application Fee" required="">
                                 </div>
                                 
                             </div>
@@ -60,13 +62,13 @@
                                 <div class="col-md-6 mb-3">
                                     <label for="">Application Starts On</label>
                                     <input class="form-control" id="" type="date" placeholder="Application Start Date"
-                                        required="">
+                                        name="start_date" required="">
                                     
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label for="">Applicatiion Ends On</label>
                                     <input class="form-control" id="" type="date" placeholder="Application End Date"
-                                        required="">
+                                        name="end_date" required="">
                                    
                                 </div>
                                
@@ -83,7 +85,7 @@
                            
                             <hr>
                             <div class="form-group text-right">
-                                <button type="button" class="btn btn-outline-primary" value="">Register Scholarshiip</button>
+                                <button type="submit" class="btn btn-outline-primary" value="">Register Scholarshiip</button>
                             </div> 
                             
                         </form>

@@ -34,42 +34,53 @@
                                 <thead>
                                     <tr>
                                         <th>Exam Name</th>
-                                        <th>Time Duration</th>
+                                        <th>Exam Duration(Seconds)</th>
+                                        <th>Exam Category</th>
+                                        <th>Exam Status</th>
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                @foreach($exams as $exam )
                                     <tr>
-                                        <td>Tiger Nixon</td>
-                                        <td>System Architect</td>
+                                        <td>{{$exam->name}}</td>
+                                        <td>{{$exam->duration}}</td>
+                                        <td>{{ucfirst($exam->category)}}</td>
+                                        <td>{{$exam->is_active == 1? "Active" : "Not Active" }}</td>
                                        
                                         <td>
                                             <div class="dropdown-basic">
                                                 <div class="dropdown">
                                                     <div class="mb-0">
-                                                        <button class="btn btn-primary btn-sm">Action
-                                                            <span><i class="fa fa-arrow-down"></i></span>
-                                                        </button>
-                                                        <div class="dropdown-content">
-                                                            <a href="#" data-original-title="" title="">View Details</a>
-                                                            <a href="#" data-original-title="" title="">Edit Detaiils</a>
-                                                            <a href="#" data-original-title="" title="">Download Questions</a>
-                                                            <div class="dropdown-divider"></div>
-                                                            <a href="#" data-original-title="" title="">Delete Exam
-                                                            </a>
+
+                                                        <div class="btn-group dropleft">
+                                                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                Actions
+                                                            </button>
+                                                            <div class="dropdown-menu">
+                                                                <a href="#" class="dropdown-item" title="">View Details</a>
+                                                                <a href="#" class="dropdown-item" title="">Edit Exam Details</a>
+                                                                <a href="#" class="dropdown-item" title="">View Exam Questions</a>
+                                                                
+                                                                <div class="dropdown-divider"></div>
+                                                                <a href="#" class="dropdown-item" title="">Delete Exam</a>
+                                                            </div>
                                                         </div>
+   
                                                     </div>
                                                 </div>
                                             </div>
                                         </td>
                                     </tr>
-
+                                @endforeach
 
                                 </tbody>
                                 <tfoot>
                                     <tr>
                                         <th>Exam Name</th>
-                                        <th>Time Duration</th>
+                                        <th>Exam Duration(Seconds)</th>
+                                        <th>Exam Category</th>
+                                        <th>Exam Status</th>
                                         <th>Actions</th>
                                     </tr>
                                 </tfoot>

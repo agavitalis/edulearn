@@ -24,9 +24,10 @@
                         <p class="lan-2">Dashboards,widgets & layout.</p>
                     </div>
                 </li>
+                
                 <li class="sidebar-list">
-                    <a class="sidebar-link sidebar-title" href="#"><i
-                            data-feather="home"></i><span class="lan-3">Dashboard </span></a>
+                    <a class="sidebar-link" href="#"><i
+                            data-feather="home"></i><span>Dashboard </span></a>
                 </li>
                 <li class="sidebar-main-title">
                     <div>
@@ -40,6 +41,22 @@
                     <ul class="sidebar-submenu">
                         <li><a class="lan-4" href="register-scholarship">Register a Scholarship</a></li>
                         <li><a class="lan-5" href="manage-scholarships">Manage Scholarships</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar-list">
+                  <a class="sidebar-link sidebar-title" href="#"><i
+                            data-feather="git-pull-request"></i><span class="lan-3">Configuration </span></a>
+                    <ul class="sidebar-submenu">
+                        <li><a class="lan-4" href="register-scholarship">Add Exam to Scholarship</a></li>
+                        <li><a class="lan-5" href="manage-scholarships">Manage Assignments</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar-list">
+                  <a class="sidebar-link sidebar-title" href="#"><i
+                            data-feather="edit"></i><span class="lan-3">Applications </span></a>
+                    <ul class="sidebar-submenu">
+                        <li><a class="lan-4" href="register-scholarship">View Applications</a></li>
+                       
                     </ul>
                 </li>
                 <li class="sidebar-main-title">
@@ -56,7 +73,13 @@
                         <li><a class="lan-5" href="manage-examinations">Manage Examinations</a></li>
                     </ul>
                 </li>
-
+                <li class="sidebar-list">
+                   <a class="sidebar-link sidebar-title" href="#"><i data-feather="clipboard"></i><span class="lan-3">Questions </span></a>
+                    <ul class="sidebar-submenu">
+                        <li><a class="lan-4" href="upload-questions">Upload Questions</a></li>
+                        <li><a class="lan-5" href="upload-examinations">Manage Questions</a></li>
+                    </ul>
+                </li>
 
 
             </ul>

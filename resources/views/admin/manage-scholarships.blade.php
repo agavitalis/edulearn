@@ -26,7 +26,7 @@
                 <div class="card">
                     <div class="card-header">
                         <h5>Manage Scholarships </h5><span>Manage, Edit and Delete registered scholarships here</span>
-                        
+
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
@@ -34,52 +34,49 @@
                                 <thead>
                                     <tr>
                                         <th>Name</th>
-                                        <th>Position</th>
-                                        <th>Office</th>
-                                        <th>Age</th>
-                                        <th>Start date</th>
+                                        <th>Category</th>
+                                        <th>Application Fee(NGN)</th>
+
+                                        <th>Start Date</th>
+                                        <th>End Date</th>
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach($scholarships as $scholarship )
                                     <tr>
-                                        <td>Tiger Nixon</td>
-                                        <td>System Architect</td>
-                                        <td>Edinburgh</td>
-                                        <td>61</td>
-                                        <td>2011/04/25</td>
+                                        <td>{{$scholarship->name}}</td>
+                                        <td>{{ucfirst($scholarship->category)}}</td>
+                                        <td>{{$scholarship->application_fee}}</td>
+                                        <td>{{\Carbon\Carbon::parse($scholarship->start_date)->diffForHumans()}}</td>
+                                        <td>{{\Carbon\Carbon::parse($scholarship->end_date)->diffForHumans()}}</td>
                                         <td>
-                                            <div class="dropdown-basic">
-                                                <div class="dropdown">
-                                                    <div class="mb-0">
-                                                        <button class="btn btn-primary btn-sm">Action
-                                                            <span><i class="fa fa-arrow-down"></i></span>
-                                                        </button>
-                                                        <div class="dropdown-content">
-                                                            <a href="#" data-original-title="" title="">Action</a>
-                                                            <a href="#" data-original-title="" title="">Another
-                                                                Action</a>
-                                                            <a href="#" data-original-title="" title="">Something Else
-                                                                Here</a>
-                                                            <div class="dropdown-divider"></div>
-                                                            <a href="#" data-original-title="" title="">Separated Link
-                                                            </a>
-                                                        </div>
-                                                    </div>
+                                            <div class="btn-group dropleft">
+                                                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Actions
+                                                </button>
+                                                <div class="dropdown-menu">
+                                                    <a href="#" class="dropdown-item" title="">View Details</a>
+                                                    <a href="#" class="dropdown-item" title="">Edit Scholarship</a>
+
+                                                    <div class="dropdown-divider"></div>
+                                                    <a href="#" class="dropdown-item" title="">Delete</a>
                                                 </div>
                                             </div>
+                                            
                                         </td>
                                     </tr>
 
-
+                                    @endforeach
                                 </tbody>
                                 <tfoot>
                                     <tr>
                                         <th>Name</th>
-                                        <th>Position</th>
-                                        <th>Office</th>
-                                        <th>Age</th>
-                                        <th>Start date</th>
+                                        <th>Category</th>
+                                        <th>Application Fee(NGN)</th>
+
+                                        <th>Start Date</th>
+                                        <th>End Date</th>
                                         <th>Actions</th>
                                     </tr>
                                 </tfoot>

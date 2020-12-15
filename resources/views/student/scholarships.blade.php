@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.student')
 @section('content')
 <div class="page-body">
     <div class="container-fluid">
@@ -26,8 +26,7 @@
                     <div class="col-xl-12">
                         <div class="card">
                             <div class="blog-box blog-list row">
-                                <div class="col-sm-5"><img class="img-fluid sm-100-w"
-                                        src="https://admin.pixelstrap.com/cuba/assets/images/faq/1.jpg" alt=""></div>
+                                <div class="col-sm-5"><img class="img-fluid sm-100-w" src="https://admin.pixelstrap.com/cuba/assets/images/faq/1.jpg" alt=""></div>
                                 <div class="col-sm-7">
                                     <div class="blog-details">
                                         <div class="blog-date"><span>05</span> January 2019</div>
@@ -41,35 +40,19 @@
                                             <p class="mt-0">inventore veritatis et quasi architecto beatae vitae dicta
                                                 sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit.</p>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-12">
-                        <div class="card">
-                            <div class="blog-box blog-list row">
-                                <div class="col-sm-5"><img class="img-fluid sm-100-w"
-                                        src="https://admin.pixelstrap.com/cuba/assets/images/faq/2.jpg" alt=""></div>
-                                <div class="col-sm-7">
-                                    <div class="blog-details">
-                                        <div class="blog-date"><span>10</span> March 2019</div>
-                                        <h6>Web Development </h6>
-                                        <div class="blog-bottom-content">
-                                            <ul class="blog-social">
-                                                <li>by: Petey Cruiser</li>
-                                                <li>34 Hits</li>
-                                            </ul>
-                                            <hr>
-                                            <p class="mt-0">inventore veritatis et quasi architecto beatae vitae dicta
-                                                sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit.</p>
+                                        <hr>
+                                        <div class="job-description text-right">
+                                            <button class="btn btn-light" type="button"><span><i class="fa fa-back"></i></span>
+                                                View Details</button>
+                                            <a class="btn btn-primary" href="scholarship-application/1"><span><i class="fa fa-check"></i></span>
+                                                Apply</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
         </div>

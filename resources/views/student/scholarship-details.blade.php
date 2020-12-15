@@ -103,7 +103,7 @@
                                     <li>Knowledge of mobile or front-end web programming</li>
                                 </ul>
                             </div>
-                            \
+                            
                             <div class="job-description">
                                 <button class="btn btn-light" type="button"><span><i class="fa fa-back"></i></span>
                                     Back</button>

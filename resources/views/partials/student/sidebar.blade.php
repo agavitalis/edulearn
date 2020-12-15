@@ -25,12 +25,9 @@
                     </div>
                 </li>
                 <li class="sidebar-list">
-                    <a class="sidebar-link sidebar-title" href="#"><i
-                            data-feather="home"></i><span class="lan-3">Dashboard </span></a>
-                    <ul class="sidebar-submenu">
-                        <li><a class="lan-4" href="index.html">Default</a></li>
-                        <li><a class="lan-5" href="dashboard-02.html">Ecommerce</a></li>
-                    </ul>
+                    <a class="sidebar-link" href="dashboard"><i data-feather="home"></i><span
+                            class="lan-3">Dashboard </span></a>
+                    
                 </li>
                 <li class="sidebar-main-title">
                     <div>
@@ -39,11 +36,11 @@
                     </div>
                 </li>
                 <li class="sidebar-list">
-                  <a class="sidebar-link sidebar-title" href="#"><i
-                            data-feather="gift"></i><span class="lan-3">Scholarships </span></a>
+                    <a class="sidebar-link sidebar-title" href="#"><i data-feather="gift"></i><span
+                            class="lan-3">Scholarships </span></a>
                     <ul class="sidebar-submenu">
-                        <li><a class="lan-4" href="index.html">Avalible Scholarships</a></li>
-                        <li><a class="lan-5" href="dashboard-02.html">My Applications</a></li>
+                        <li><a class="lan-4" href="scholarships">Avalible Scholarships</a></li>
+                        <li><a class="lan-5" href="applications">My Applications</a></li>
                     </ul>
                 </li>
                 <li class="sidebar-main-title">
@@ -53,8 +50,8 @@
                     </div>
                 </li>
                 <li class="sidebar-list">
-                   <a class="sidebar-link sidebar-title" href="#"><i
-                            data-feather="file-text"></i><span class="lan-3">Exams </span></a>
+                    <a class="sidebar-link sidebar-title" href="#"><i data-feather="file-text"></i><span
+                            class="lan-3">Exams </span></a>
                     <ul class="sidebar-submenu">
                         <li><a class="lan-4" href="index.html">My Exams</a></li>
                         <li><a class="lan-5" href="dashboard-02.html">My Applications</a></li>

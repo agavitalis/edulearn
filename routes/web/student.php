@@ -3,6 +3,7 @@
 use App\Http\Controllers\Student\DashboardController;
 use App\Http\Controllers\Student\ExaminationController;
 use App\Http\Controllers\Student\ScholarshipController;
+use App\Http\Controllers\Student\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 Route::group(['prefix' => 'student','namespace'=>"Student"], function()  
@@ -10,6 +11,10 @@ Route::group(['prefix' => 'student','namespace'=>"Student"], function()
     Route::get('/dashboard', [DashboardController::class, 'dashboard'])
     ->middleware('guest')
     ->name('student_dashboard');
+
+    Route::match(['GET','POST'],'/profile', [ProfileController::class, 'profile'])
+    ->middleware('guest')
+    ->name('student_profile');
 
     Route::get('/scholarships', [ScholarshipController::class, 'scholarships'])
     ->middleware('guest')

@@ -5,19 +5,24 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class SecStudentProfile extends Model
+class StudentProfile extends Model
 {
     use HasFactory;
 
     protected $fillable = [
         'user_id',
+
         'phone',
-        'address',
-        'lga',
-        'state',
+
+        'category',
+        'school_name',
+        'level',
+        'exp_year_of_graduation',
+
         'country',
-        'school',
-        'class',
+        'state_of_orgin',
+        'lga',
+        'address',
     ];
 
     public function user()

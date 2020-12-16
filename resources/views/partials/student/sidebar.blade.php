@@ -29,6 +29,11 @@
                             class="lan-3">Dashboard </span></a>
                     
                 </li>
+                <li class="sidebar-list">
+                    <a class="sidebar-link" href="{{ route('student_profile') }}"><i data-feather="user"></i><span
+                            class="lan-3">My Profile </span></a>
+                    
+                </li>
                 <li class="sidebar-main-title">
                     <div>
                         <h6 class="lan-1">Scholarships</h6>

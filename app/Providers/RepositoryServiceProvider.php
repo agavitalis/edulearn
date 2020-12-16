@@ -9,7 +9,8 @@ use App\Repositories\Interfaces\ExamRepositoryInterface;
 use App\Repositories\ExamRepository;
 use App\Repositories\Interfaces\QuestionRepositoryInterface;
 use App\Repositories\QuestionRepository;
-
+use App\Repositories\Interfaces\StudentProfileRepositoryInterface;
+use App\Repositories\StudentProfileRepository;
 class RepositoryServiceProvider extends ServiceProvider
 {
     /**
@@ -22,6 +23,7 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(ScholarshipRepositoryInterface::class, ScholarshipRepository::class);
         $this->app->bind(ExamRepositoryInterface::class, ExamRepository::class);
         $this->app->bind(QuestionRepositoryInterface::class, QuestionRepository::class);
+        $this->app->bind(StudentProfileRepositoryInterface::class, StudentProfileRepository::class);
     }
 
     /**

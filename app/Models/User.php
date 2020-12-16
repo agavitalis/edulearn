@@ -43,14 +43,8 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function sec_student_profile()
+    public function student_profile()
     {
-        return $this->hasOne(SecStudentProfile::class);
-    }
-
-
-    public function uni_student_profile()
-    {
-        return $this->hasOne(UniStudentProfile::class);
+        return $this->hasOne(StudentProfile::class);
     }
 }

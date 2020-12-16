@@ -1,4 +1,5 @@
-@extends('layouts.admin')
+@extends('layouts.student')
+
 @section('content')
 <div class="page-body">
     <div class="container-fluid">
@@ -44,13 +45,13 @@
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for="exampleFormControlInput5">First Name:<span class="font-danger">*</span></label>
-                                                <input class="form-control" id="exampleFormControlInput5" type="email" placeholder="First Name">
+                                                <input class="form-control" id="first_name" name="first_name" type="text" placeholder="First Name">
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for="exampleFormControlInput5">Last Name:<span class="font-danger">*</span></label>
-                                                <input class="form-control" id="exampleFormControlInput5" type="email" placeholder="Last Name">
+                                                <input class="form-control" id="last_name" name="last_name" type="text" placeholder="Last Name">
                                             </div>
                                         </div>
 
@@ -59,13 +60,13 @@
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for="exampleFormControlInput5">Email Address:<span class="font-danger">*</span></label>
-                                                <input class="form-control" id="exampleFormControlInput5" type="email" placeholder="Email Address">
+                                                <input class="form-control" id="email" name="email" type="email" placeholder="Email Address">
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for="exampleFormControlInput5">Phone:<span class="font-danger">*</span></label>
-                                                <input class="form-control" id="exampleFormControlInput5" type="email" placeholder="Valid Phone Number">
+                                                <input class="form-control" id="phone" name="phone" type="tel" placeholder="Valid Phone Number">
                                             </div>
                                         </div>
 
@@ -79,9 +80,9 @@
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for="exampleFormControlInput5">I am a:<span class="font-danger">*</span></label>
-                                                <select class="form-control" name="" id="">
-                                                    <option value="">University Student</option>
-                                                    <option value="">Secondary School Student</option>
+                                                <select class="form-control" id="category" name="category">
+                                                    <option value="university">University Student</option>
+                                                    <option value="secondary">Secondary School Student</option>
                                                 </select>
 
                                             </div>
@@ -89,21 +90,21 @@
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for="exampleFormControlInput5">School Name:<span class="font-danger">*</span></label>
-                                                <input class="form-control" id="exampleFormControlInput5" type="email" placeholder="Your School Name">
+                                                <input class="form-control" id="school_name" name="school_name" type="text" placeholder="Your School Name">
                                             </div>
                                         </div>
 
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for="exampleFormControlInput5">Class or Level:<span class="font-danger">*</span></label>
-                                                <input class="form-control" id="exampleFormControlInput5" type="email" placeholder="Year of Study">
+                                                <input class="form-control" id="level" name="level" type="text" placeholder="Year of Study">
                                             </div>
                                         </div>
 
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for="exampleFormControlInput5">Expected Year of Graduation:<span class="font-danger">*</span></label>
-                                                <input class="form-control" id="exampleFormControlInput5" type="email" placeholder="Year of Graduation">
+                                                <input class="form-control" id="exp_year_of_graduation" name="exp_year_of_graduation" type="text" placeholder="Year of Graduation">
                                             </div>
                                         </div>
 
@@ -115,27 +116,27 @@
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for="exampleFormControlInput7">Country:<span class="font-danger">*</span></label>
-                                                <input class="form-control" id="exampleFormControlInput7" type="email" placeholder="Enter Location">
+                                                <input class="form-control" id="country" name="country" type="text" placeholder="Country">
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for="exampleFormControlInput7">State of Origin:<span class="font-danger">*</span></label>
-                                                <input class="form-control" id="exampleFormControlInput7" type="email" placeholder="Enter Location">
+                                                <input class="form-control" id="state_of_orgin" name="state_of_orgin" type="text" placeholder="State of Origin">
                                             </div>
                                         </div>
 
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for="exampleFormControlInput8">LGA:<span class="font-danger">*</span></label>
-                                                <input class="form-control" id="exampleFormControlInput8" type="email" placeholder="Enter Company Name">
+                                                <input class="form-control" id="lga" name="lga" type="text" placeholder="Local Govt of Origin">
                                             </div>
                                         </div>
 
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for="exampleFormControlInput8">Residential Address:<span class="font-danger">*</span></label>
-                                                <input class="form-control" id="exampleFormControlInput8" type="email" placeholder="Enter Company Name">
+                                                <input class="form-control" id="address" name="address" type="text" placeholder="Residential Address">
                                             </div>
                                         </div>
                                     </div>
@@ -145,7 +146,7 @@
                         </div>
                         <div class="card-footer text-right">
                             <input class="btn btn-light" type="reset" value="Cancel">
-                            <button class="btn btn-primary" type="button" onClick="payWithRave()">Complete Application</button>
+                            <button class="btn btn-primary apply" type="button">Complete Application</button>
 
                         </div>
                     </div>
@@ -159,37 +160,5 @@
 @endsection
 @section('scripts')
 <script src="https://api.ravepay.co/flwv3-pug/getpaidx/api/flwpbf-inline.js"></script>
-<script>
-    const API_publicKey = "FLWPUBK_TEST-6ed373149166c784cf560090702de235-X"
-
-    function payWithRave() {
-        var x = getpaidSetup({
-            PBFPubKey: API_publicKey,
-            customer_email: "user@example.com",
-            amount: 2000,
-            customer_phone: "234099940409",
-            currency: "NGN",
-            txref: "rave-123456",
-            meta: [{
-                metaname: "flightID",
-                metavalue: "AP1234"
-            }],
-            onclose: function() {},
-            callback: function(response) {
-                var txref = response.data.txRef; // collect txRef returned and pass to a                    server page to complete status check.
-                console.log("This is the response returned after a charge", response);
-                if (
-                    response.data.chargeResponseCode == "00" ||
-                    response.data.chargeResponseCode == "0"
-                ) {
-                    // redirect to a success page
-                } else {
-                    // redirect to a failure page.
-                }
-
-                x.close(); // use this to close the modal immediately after payment.
-            }
-        });
-    }
-</script>
+<script src="../../backend/student/scholarship-application.js"></script>
 @endsection

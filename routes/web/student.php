@@ -9,31 +9,31 @@ use Illuminate\Support\Facades\Route;
 Route::group(['prefix' => 'student','namespace'=>"Student"], function()  
 { 
     Route::get('/dashboard', [DashboardController::class, 'dashboard'])
-    ->middleware('guest')
+    ->middleware('auth')
     ->name('student_dashboard');
 
     Route::match(['GET','POST'],'/profile', [ProfileController::class, 'profile'])
-    ->middleware('guest')
+    ->middleware('auth')
     ->name('student_profile');
 
     Route::get('/scholarships', [ScholarshipController::class, 'scholarships'])
-    ->middleware('guest')
+    ->middleware('auth')
     ->name('student_scholarships');
 
     Route::get('/scholarship/{id?}', [ScholarshipController::class, 'scholarship_details'])
-    ->middleware('guest')
+    ->middleware('auth')
     ->name('student_scholarship_details');
 
     Route::get('/scholarship-application/{id}', [ScholarshipController::class, 'scholarships_application'])
-    ->middleware('guest')
+    ->middleware('auth')
     ->name('student_scholarships_application');
 
     Route::get('/examination', [ExaminationController::class, 'exam'])
-    ->middleware('guest')
+    ->middleware('auth')
     ->name('student_exam');
 
     Route::get('/exam-instructions', [ExaminationController::class, 'exam_instructions'])
-    ->middleware('guest')
+    ->middleware('auth')
     ->name('student_exam_instructions');
 
 });

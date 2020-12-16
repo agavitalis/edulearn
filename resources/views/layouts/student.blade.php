@@ -126,9 +126,20 @@
                                 </div>
                             </div>
                             <ul class="profile-dropdown onhover-show-div">
-                                <li><a href="#"><i data-feather="user"></i><span>Profile </span></a></li>
 
-                                <li><a href="#"><i data-feather="log-in"> </i><span>Log out</span></a></li>
+                                <li><a href="#"><i data-feather="user"></i><span>Profile </span></a></li>
+                                <li>
+                                    <!-- Authentication -->
+                                    <form method="POST" action="{{ route('logout') }}">
+                                        @csrf
+
+                                        <a href="route('logout')" onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                                            <i data-feather="log-in"> </i>{{ __('Logout') }}
+                                        </a>
+                                    </form>
+                                </li>
+
                             </ul>
                         </li>
                     </ul>

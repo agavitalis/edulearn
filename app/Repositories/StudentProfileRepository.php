@@ -25,16 +25,42 @@ class StudentProfileRepository implements StudentProfileRepositoryInterface
     {
         //check if the profile have been created before
         $student_profile = StudentProfile::where(['id'=>$request->id])->first();
+
+        if($student_profile){
+            StudentProfile::where(['id'=>$request->id])->update([
+                'user_id' => $request->user_id,
+                'phone' => $request->phone,
+                'category' => $request->category,
+
+                'school_name' => $request->school_name,
+                'level' => $request->level,
+                'exp_year_of_graduation' => $request->exp_year_of_graduation,
+
+                'country' => $request->country,
+                'state_of_orgin' => $request->state_of_orgin,
+                'lga' => $request->lga,
+                'address' => $request->address,
+            ]);
+        }else{
+
+            StudentProfile::create([
+                
+                'user_id' => $request->user_id,
+                'phone' => $request->phone,
+                'category' => $request->category,
+
+                'school_name' => $request->school_name,
+                'level' => $request->level,
+                'exp_year_of_graduation' => $request->exp_year_of_graduation,
+
+                'country' => $request->country,
+                'state_of_orgin' => $request->state_of_orgin,
+                'lga' => $request->lga,
+                'address' => $request->address,
+            ]);
+        }
+
         
-        StudentProfile::where(['id'=>$request->id])->update([
-            'name' => $request->name,
-            'description' => $request->description,
-            'start_date' => $request->start_date,
-            'end_date' => $request->end_date,
-            'cover_picture' => $request->cover_picture,
-            'application_fee' => $request->application_fee,
-            'category' => $request->category,
-        ]);
         return true;
     }
  

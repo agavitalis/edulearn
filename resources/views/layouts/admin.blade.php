@@ -12,7 +12,7 @@
     <meta name="author" content="pixelstrap">
     <link rel="icon" href="https://admin.pixelstrap.com/cuba/assets/images/favicon.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://admin.pixelstrap.com/cuba/assets/images/favicon.png" type="image/x-icon">
-    <title>Dashboard</title>
+    <title>Dashboard::Admin</title>
     <!-- Google font-->
     <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i&amp;display=swap"
         rel="stylesheet">
@@ -43,7 +43,7 @@
     <link rel="stylesheet" type="text/css" href="https://admin.pixelstrap.com/cuba/assets/css/responsive.css">
 </head>
 
-<body onload="startTime()">
+<body>
     <!-- tap on top starts-->
     <div class="tap-top"><i data-feather="chevrons-up"></i></div>
     <!-- tap on tap ends-->
@@ -147,13 +147,23 @@
                             <div class="media profile-media"><img class="b-r-10"
                                     src="https://admin.pixelstrap.com/cuba/assets/images/dashboard/profile.jpg" alt="">
                                 <div class="media-body"><span>Ogbonna Vitalis</span>
-                                    <p class="mb-0 font-roboto">Student <i class="middle fa fa-angle-down"></i></p>
+                                    <p class="mb-0 font-roboto">Admin <i class="middle fa fa-angle-down"></i></p>
                                 </div>
                             </div>
                             <ul class="profile-dropdown onhover-show-div">
                                 <li><a href="#"><i data-feather="user"></i><span>Profile </span></a></li>
 
-                                <li><a href="#"><i data-feather="log-in"> </i><span>Log out</span></a></li>
+                                <li>
+                                    <!-- Authentication -->
+                                    <form method="POST" action="{{ route('logout') }}">
+                                        @csrf
+
+                                        <a href="route('logout')" onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                                            <i data-feather="log-in"> </i>{{ __('Logout') }}
+                                        </a>
+                                    </form>
+                                </li>
                             </ul>
                         </li>
                     </ul>

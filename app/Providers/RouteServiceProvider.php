@@ -7,7 +7,7 @@ use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvi
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\Facades\Route;
-use Auth;
+use Illuminate\Support\Facades\Auth;
 
 class RouteServiceProvider extends ServiceProvider
 {
@@ -18,8 +18,18 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    public function HOME(){
-        return '/dashboard';
+    //public const HOME 
+    public static function HOME(){
+
+        if (Auth::user()->user_type == "student")
+       {
+            //take the guy to the appropriate dashboard
+            return  "/student/dashboard";
+       }
+       else{
+            //take the guy to the appropriate dashboard
+            return  "/admin/dashboard";
+       }
     }
 
     /**

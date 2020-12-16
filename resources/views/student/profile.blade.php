@@ -22,13 +22,15 @@
     <!-- Container-fluid starts-->
     <div class="container-fluid">
         <div class="row">
-
+           
             <div class="col-xl-10 offset-1 xl-80 mt-5">
                 <div class="card">
+                    @include('partials.admin.alert')
                     <div class="job-search">
                         
                         <form class="form theme-form" method="POST" action="{{ route('student_profile') }}">
                             @csrf
+                            <input type="hidden" name="user_id" value="1">
                             <div class="card-body pb-0">
                             
                                 <div class="job-description">

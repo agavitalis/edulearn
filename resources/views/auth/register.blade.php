@@ -1,107 +1,77 @@
-<!DOCTYPE html>
-<html lang="en">
-  
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Cuba admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
-    <meta name="keywords" content="admin template, Cuba admin template, dashboard template, flat admin template, responsive admin template, web app">
-    <meta name="author" content="pixelstrap">
-    <link rel="icon" href="https://admin.pixelstrap.com/cuba/assets/images/favicon.png" type="image/x-icon">
-    <link rel="shortcut icon" href="https://admin.pixelstrap.com/cuba/assets/images/favicon.png" type="image/x-icon">
-    <title>Edulearn - Scholarship Portal</title>
-    <!-- Google font-->
-    <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i&amp;display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://admin.pixelstrap.com/cuba/assets/css/fontawesome.css">
-    <!-- ico-font-->
-    <link rel="stylesheet" type="text/css" href="https://admin.pixelstrap.com/cuba/assets/css/vendors/icofont.css">
-    <!-- Themify icon-->
-    <link rel="stylesheet" type="text/css" href="https://admin.pixelstrap.com/cuba/assets/css/vendors/themify.css">
-    <!-- Flag icon-->
-    <link rel="stylesheet" type="text/css" href="https://admin.pixelstrap.com/cuba/assets/css/vendors/flag-icon.css">
-    <!-- Feather icon-->
-    <link rel="stylesheet" type="text/css" href="https://admin.pixelstrap.com/cuba/assets/css/vendors/feather-icon.css">
-    <!-- Plugins css start-->
-    <!-- Plugins css Ends-->
-    <!-- Bootstrap css-->
-    <link rel="stylesheet" type="text/css" href="https://admin.pixelstrap.com/cuba/assets/css/vendors/bootstrap.css">
-    <!-- App css-->
-    <link rel="stylesheet" type="text/css" href="https://admin.pixelstrap.com/cuba/assets/css/style.css">
-    <link id="color" rel="stylesheet" href="https://admin.pixelstrap.com/cuba/assets/css/color-1.css" media="screen">
-    <!-- Responsive css-->
-    <link rel="stylesheet" type="text/css" href="https://admin.pixelstrap.com/cuba/assets/css/responsive.css">
-  </head>
-  <body>
-    <!-- login page start-->
-    <div class="container-fluid p-0"> 
-      <div class="row">
-        <div class="col-xl-7"><img class="bg-img-cover bg-center" src="https://admin.pixelstrap.com/cuba/assets/images/login/1.jpg" alt="looginpage"></div>
-        <div class="col-xl-5 p-0"> 
-          <div class="login-card">
-            <div>
-              <div><a class="logo" href="index.html"><img class="img-fluid for-light" src="https://admin.pixelstrap.com/cuba/assets/images/logo/login.png" alt="looginpage"><img class="img-fluid for-dark" src="https://admin.pixelstrap.com/cuba/assets/images/logo/logo_dark.png" alt="looginpage"></a></div>
-              <div class="login-main"> 
-                <form class="theme-form">
-                  <h4>Create your account</h4>
-                  <p>Enter your personal details to create account</p>
-                  <div class="form-group">
-                    <label class="col-form-label pt-0">Your Name</label>
-                    <div class="form-row">
-                      <div class="col-6">
-                        <input class="form-control" type="text" required="" placeholder="First name">
-                      </div>
-                      <div class="col-6">
-                        <input class="form-control" type="text" required="" placeholder="Last name">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-form-label">Email Address</label>
-                    <input class="form-control" type="email" required="" placeholder="Test@gmail.com">
-                  </div>
-                  <div class="form-group">
-                    <label class="col-form-label">Password</label>
-                    <input class="form-control" type="password" name="login[password]" required="" placeholder="*********">
-                    <div class="show-hide"><span class="show"></span></div>
-                  </div>
-                  <div class="form-group mb-0">
-                    <div class="checkbox p-0">
-                      <input id="checkbox1" type="checkbox">
-                      <label class="text-muted" for="checkbox1">Agree with<a class="ml-2" href="#">Privacy Policy</a></label>
-                    </div>
-                    <button class="btn btn-primary btn-block" type="submit">Create Account</button>
-                  </div>
-                  <h6 class="text-muted mt-4 or">Or signup with</h6>
-                  <div class="social mt-4">
-                    <div class="btn-showcase"><a class="btn btn-light" href="https://www.linkedin.com/login" target="_blank"><i class="txt-linkedin" data-feather="linkedin"></i> LinkedIn </a><a class="btn btn-light" href="https://twitter.com/login?lang=en" target="_blank"><i class="txt-twitter" data-feather="twitter"></i>twitter</a><a class="btn btn-light" href="https://www.facebook.com/" target="_blank"><i class="txt-fb" data-feather="facebook"></i>facebook</a></div>
-                  </div>
-                  <p class="mt-4 mb-0">Already have an account?<a class="ml-2" href="login.html">Sign in</a></p>
-                </form>
+@extends('layouts.auth')
+
+@section('content')
+<div class="row">
+  <div class="col-xl-7"><img class="bg-img-cover bg-center" src="https://admin.pixelstrap.com/cuba/assets/images/login/1.jpg" alt="looginpage"></div>
+  <div class="col-xl-5 p-0">
+    <div class="login-card">
+      <div>
+        <div><a class="logo text-left" href="index.html"><img class="img-fluid for-light" src="../appp/images/logo.png" alt="looginpage"><img class="img-fluid for-dark" src="https://admin.pixelstrap.com/cuba/assets/images/logo/logo_dark.png" alt="looginpage"></a></div>
+        <div class="login-main">
+          <!-- Validation Errors -->
+          @if ($errors->any())
+
+          <div class="col-md-12">
+            <div class="alert alert-danger dark alert-dismissible fade show" role="alert">
+              <div class="font-medium text-red-600">
+                {{ __('Whoops! Something went wrong.') }}
+              </div>
+
+              <ul class="mt-3 list-disc list-inside text-sm text-red-600">
+                @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+                @endforeach
+              </ul>
+              <button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+            </div>
+
+          </div>
+          @endif
+          <form class="theme-form" method="POST" action="{{ route('register') }}">
+            @csrf
+            <h4>Create your account</h4>
+            <p>Enter your personal details to create account</p>
+            <div class="form-group">
+              <label class="col-form-label pt-0">Your Name</label>
+              <div class="form-row">
+                <div class="col-6">
+                  <input class="form-control" type="text" name="first_name" required="" value="{{old('first_name')}}" placeholder="First name">
+                </div>
+                <div class="col-6">
+                  <input class="form-control" type="text" name="last_name" required="" value="{{old('last_name')}}" placeholder="Last name">
+                </div>
               </div>
             </div>
-          </div>
+            <div class="form-group">
+              <label class="col-form-label">Email Address</label>
+              <input class="form-control" type="email" name="email" required="" alue="old('email')" placeholder="Test@gmail.com">
+            </div>
+            <div class="form-group">
+              <label class="col-form-label">Password</label>
+              <input class="form-control" type="password" name="password" required="" placeholder="*********">
+              <div class="show-hide"><span class="show"></span></div>
+            </div>
+            <div class="form-group">
+              <label class="col-form-label">Confirm Password</label>
+              <input class="form-control" type="password" name="password_confirmation" required="" placeholder="*********">
+              <div class="show-hide"><span class="show"></span></div>
+            </div>
+            <div class="form-group mb-0">
+              <div class="checkbox p-0">
+                <input id="checkbox1" type="checkbox">
+                <label class="text-muted" for="checkbox1">Agree with<a class="ml-2" href="#">Privacy Policy</a></label>
+              </div>
+              <button class="btn btn-primary btn-block" type="submit">Create Account</button>
+            </div>
+            <h6 class="text-muted mt-4 or">Or signup with</h6>
+            <div class="social mt-4">
+              <div class="btn-showcase"><a class="btn btn-light" href="https://www.linkedin.com/login" target="_blank"><i class="txt-linkedin" data-feather="linkedin"></i> LinkedIn </a><a class="btn btn-light" href="https://twitter.com/login?lang=en" target="_blank"><i class="txt-twitter" data-feather="twitter"></i>twitter</a><a class="btn btn-light" href="https://www.facebook.com/" target="_blank"><i class="txt-fb" data-feather="facebook"></i>facebook</a></div>
+            </div>
+            <p class="mt-4 mb-0">Already have an account?<a class="ml-2" href="/login">Sign in</a></p>
+          </form>
         </div>
       </div>
-      <!-- latest jquery-->
-      <script src="https://admin.pixelstrap.com/cuba/assets/js/jquery-3.5.1.min.js"></script>
-      <!-- Bootstrap js-->
-      <script src="https://admin.pixelstrap.com/cuba/assets/js/bootstrap/popper.min.js"></script>
-      <script src="https://admin.pixelstrap.com/cuba/assets/js/bootstrap/bootstrap.js"></script>
-      <!-- feather icon js-->
-      <script src="https://admin.pixelstrap.com/cuba/assets/js/icons/feather-icon/feather.min.js"></script>
-      <script src="https://admin.pixelstrap.com/cuba/assets/js/icons/feather-icon/feather-icon.js"></script>
-      <!-- Sidebar jquery-->
-      <script src="https://admin.pixelstrap.com/cuba/assets/js/config.js"></script>
-      <!-- Plugins JS start-->
-      <!-- Plugins JS Ends-->
-      <!-- Theme js-->
-      <script src="https://admin.pixelstrap.com/cuba/assets/js/script.js"></script>
-      <!-- login js-->
-      <!-- Plugin used-->
     </div>
-  </body>
-
-<!-- Mirrored from admin.pixelstrap.com/cuba/theme/sign-up-two.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 10 Dec 2020 12:44:08 GMT -->
-</html>
+  </div>
+</div>
+@endsection

@@ -22,7 +22,7 @@ class CreateScholarshipsTable extends Migration
             $table->string('cover_picture')->nullable();
             $table->string('application_fee');
             $table->boolean('is_active')->default(true);
-            $table->enum('category', array('University', 'Secondary'));
+            $table->enum('category', array('University', 'Secondary School'));
             $table->timestamps();
             $table->softDeletes();
         });

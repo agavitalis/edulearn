@@ -45,8 +45,8 @@
             
                                     <select class="form-control" name="category">
                                     
-                                        <option value="university">University Students</option>
-                                        <option value="secondary">Secondary School Students</option>
+                                        <option value="University">University Students</option>
+                                        <option value="Secondary School">Secondary School Students</option>
                                     
                                     </select>
 

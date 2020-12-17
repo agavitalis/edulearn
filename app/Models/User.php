@@ -43,8 +43,19 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    /**
+     * Get a profile that belongs to this user.
+     */
     public function student_profile()
     {
         return $this->hasOne(StudentProfile::class);
+    }
+
+     /**
+     * Get the applications that belongs to this user.
+     */
+    public function applications()
+    {
+        return $this->hasMany(Application::class);
     }
 }

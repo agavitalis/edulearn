@@ -41,13 +41,16 @@
                     </div>
                 </li>
                 <li class="sidebar-list">
-                    <a class="sidebar-link sidebar-title" href="#"><i data-feather="gift"></i><span
+                    <a class="sidebar-link" href="{{ route('student_scholarships') }}"><i data-feather="gift"></i><span
                             class="lan-3">Scholarships </span></a>
-                    <ul class="sidebar-submenu">
-                        <li><a class="lan-4" href="scholarships">Avalible Scholarships</a></li>
-                        <li><a class="lan-5" href="applications">My Applications</a></li>
-                    </ul>
+                    
                 </li>
+                <li class="sidebar-list">
+                    <a class="sidebar-link" href="{{ route('student_scholarships') }}"><i data-feather="calendar"></i><span
+                            class="lan-3">My Applications </span></a>
+                    
+                </li>
+                
                 <li class="sidebar-main-title">
                     <div>
                         <h6 class="lan-1">Examinations</h6>

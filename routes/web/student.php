@@ -20,7 +20,7 @@ Route::group(['prefix' => 'student','namespace'=>"Student"], function()
     ->middleware('auth')
     ->name('student_scholarships');
 
-    Route::get('/scholarship/{id?}', [ScholarshipController::class, 'scholarship_details'])
+    Route::get('/scholarship/{id}', [ScholarshipController::class, 'scholarship_details'])
     ->middleware('auth')
     ->name('student_scholarship_details');
 

@@ -14,28 +14,27 @@
     <!-- Google font-->
     <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&amp;display=swap" rel="stylesheet">
+     <!-- font-awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- ico-font-->
-    <link rel="stylesheet" type="text/css" href="https://admin.pixelstrap.com/cuba/assets/css/vendors/icofont.css">
+    <link rel="stylesheet" type="text/css" href="../../backend/css/icofont.css">
     <!-- Themify icon-->
-    <link rel="stylesheet" type="text/css" href="https://admin.pixelstrap.com/cuba/assets/css/vendors/themify.css">
+    <link rel="stylesheet" type="text/css" href="../../backend/css/themify.css">
     <!-- Flag icon-->
-    <link rel="stylesheet" type="text/css" href="https://admin.pixelstrap.com/cuba/assets/css/vendors/flag-icon.css">
+    <link rel="stylesheet" type="text/css" href="../../backend/css/flag-icon.css">
     <!-- Feather icon-->
-    <link rel="stylesheet" type="text/css" href="https://admin.pixelstrap.com/cuba/assets/css/vendors/feather-icon.css">
+    <link rel="stylesheet" type="text/css" href="../../backend/css/feather-icon.css">
     <!-- Plugins css start-->
-    <link rel="stylesheet" type="text/css" href="https://admin.pixelstrap.com/cuba/assets/css/vendors/animate.css">
-    <!-- <link rel="stylesheet" type="text/css" href="https://admin.pixelstrap.com/cuba/assets/css/vendors/chartist.css">
-    <link rel="stylesheet" type="text/css" href="https://admin.pixelstrap.com/cuba/assets/css/vendors/date-picker.css"> -->
-    <link rel="stylesheet" type="text/css" href="https://admin.pixelstrap.com/cuba/assets/css/vendors/datatables.css">
+    <link rel="stylesheet" type="text/css" href="../../backend/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="../../backend/css/datatables.css">
     <!-- Plugins css Ends-->
     <!-- Bootstrap css-->
-    <link rel="stylesheet" type="text/css" href="https://admin.pixelstrap.com/cuba/assets/css/vendors/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../../backend/css/bootstrap.css">
     <!-- App css-->
-    <link rel="stylesheet" type="text/css" href="https://admin.pixelstrap.com/cuba/assets/css/style.css">
-    <link id="color" rel="stylesheet" href="https://admin.pixelstrap.com/cuba/assets/css/color-1.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="../../backend/css/style.css">
+    <link id="color" rel="stylesheet" href="../../backend/css/color-1.css" media="screen">
     <!-- Responsive css-->
-    <link rel="stylesheet" type="text/css" href="https://admin.pixelstrap.com/cuba/assets/css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="../../backend/css/responsive.css">
 </head>
 
 <body>
@@ -177,41 +176,34 @@
         </div>
     </div>
     <!-- latest jquery-->
-    <script src="https://admin.pixelstrap.com/cuba/assets/js/jquery-3.5.1.min.js"></script>
+    <script src="../../backend/js/jquery-3.5.1.min.js"></script>
     <!-- Bootstrap js-->
-    <script src="https://admin.pixelstrap.com/cuba/assets/js/bootstrap/popper.min.js"></script>
-    <script src="https://admin.pixelstrap.com/cuba/assets/js/bootstrap/bootstrap.js"></script>
+    <script src="../../backend/js/popper.min.js"></script>
+    <script src="../../backend/js/bootstrap.js"></script>
     <!-- feather icon js-->
-    <script src="https://admin.pixelstrap.com/cuba/assets/js/icons/feather-icon/feather.min.js"></script>
-    <script src="https://admin.pixelstrap.com/cuba/assets/js/icons/feather-icon/feather-icon.js"></script>
+    <script src="../../backend/js/feather.min.js"></script>
+    <script src="../../backend/js/feather-icon.js"></script>
     <!-- Sidebar jquery-->
-    <script src="https://admin.pixelstrap.com/cuba/assets/js/config.js"></script>
+    <script src="../../backend/js/config.js"></script>
     <!-- Plugins JS start-->
-    <script src="https://admin.pixelstrap.com/cuba/assets/js/sidebar-menu.js"></script>
-    <script src="https://admin.pixelstrap.com/cuba/assets/js/chart/chartist/chartist.js"></script>
-    <script src="https://admin.pixelstrap.com/cuba/assets/js/chart/chartist/chartist-plugin-tooltip.js"></script>
-    <script src="https://admin.pixelstrap.com/cuba/assets/js/chart/knob/knob.min.js"></script>
-    <script src="https://admin.pixelstrap.com/cuba/assets/js/chart/knob/knob-chart.js"></script>
-    <script src="https://admin.pixelstrap.com/cuba/assets/js/chart/apex-chart/apex-chart.js"></script>
-    <script src="https://admin.pixelstrap.com/cuba/assets/js/chart/apex-chart/stock-prices.js"></script>
-    <script src="https://admin.pixelstrap.com/cuba/assets/js/notify/bootstrap-notify.min.js"></script>
-    <script src="https://admin.pixelstrap.com/cuba/assets/js/dashboard/default.js"></script>
-    <script src="https://admin.pixelstrap.com/cuba/assets/js/notify/index.js"></script>
-    <!-- <script src="https://admin.pixelstrap.com/cuba/assets/js/datepicker/date-picker/datepicker.js"></script>
-    <script src="https://admin.pixelstrap.com/cuba/assets/js/datepicker/date-picker/datepicker.en.js"></script>
-    <script src="https://admin.pixelstrap.com/cuba/assets/js/datepicker/date-picker/datepicker.custom.js"></script>
-    <script src="https://admin.pixelstrap.com/cuba/assets/js/typeahead/handlebars.js"></script>
-    <script src="https://admin.pixelstrap.com/cuba/assets/js/typeahead/typeahead.bundle.js"></script>
-    <script src="https://admin.pixelstrap.com/cuba/assets/js/typeahead/typeahead.custom.js"></script>
-    <script src="https://admin.pixelstrap.com/cuba/assets/js/typeahead-search/handlebars.js"></script>
-    <script src="https://admin.pixelstrap.com/cuba/assets/js/typeahead-search/typeahead-custom.js"></script> -->
-    <script src="https://admin.pixelstrap.com/cuba/assets/js/editor/ckeditor/ckeditor.js"></script>
-    <script src="https://admin.pixelstrap.com/cuba/assets/js/editor/ckeditor/adapters/jquery.js"></script>
-    <script src="https://admin.pixelstrap.com/cuba/assets/js/editor/ckeditor/styles.js"></script>
+    <script src="../../backend/js/sidebar-menu.js"></script>
+   <script src="../../backend/js/chart/chartist/chartist.js"></script>
+    <script src="../../backend/js/chart/chartist/chartist-plugin-tooltip.js"></script>
+    <script src="../../backend/js/chart/knob/knob.min.js"></script>
+    <script src="../../backend/js/chart/knob/knob-chart.js"></script>
+    <script src="../../backend/js/chart/apex-chart/apex-chart.js"></script> 
+    <script src="../../backend/js/chart/apex-chart/stock-prices.js"></script>
+    <script src="../../backend/js/notify/bootstrap-notify.min.js"></script>
+    <script src="../../backend/js/dashboard/default.js"></script>
+    <script src="../../backend/js/notify/index.js"></script>
+    
+    <script src="../../backend/js/editor/ckeditor/ckeditor.js"></script>
+    <script src="../../backend/js/editor/ckeditor/adapters/jquery.js"></script>
+    <script src="../../backend/js/editor/ckeditor/styles.js"></script>
     <script src="../../backend/js/ckeditor.custom.js"></script>
-    <script src="https://admin.pixelstrap.com/cuba/assets/js/datatable/datatables/jquery.dataTables.min.js"></script>
-    <script src="https://admin.pixelstrap.com/cuba/assets/js/datatable/datatables/datatable.custom.js"></script>
-    <script src="https://admin.pixelstrap.com/cuba/assets/js/tooltip-init.js"></script>
+    <script src="../../backend/js/datatable/datatables/jquery.dataTables.min.js"></script>
+    <script src="../../backend/js/datatable/datatables/datatable.custom.js"></script>
+    <script src="../../backend/js/tooltip-init.js"></script>
     @yield('scripts')
     <!-- Plugins JS Ends-->
     <!-- Theme js-->

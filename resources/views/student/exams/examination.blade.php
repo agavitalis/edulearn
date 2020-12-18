@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.student')
 @section('content')
 <div class="page-body">
     <div class="container-fluid">
@@ -36,14 +36,6 @@
                                     @foreach($questions as $question)
                                     <a class="nav-link mb-2 {{$counter == 1? 'active' : ''}}" id="v-pills-{{$counter}}-tab" data-toggle="pill" href="#v-pills-{{$counter}}" role="tab" aria-controls="v-pills-{{$counter}}" aria-selected="true">Question {{$counter}}</a>
 
-                                    <!-- <a class="nav-link" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2"
-                                        role="tab" aria-controls="v-pills-2" aria-selected="false">Question 2</a>
-
-                                    <a class="nav-link" id="v-pills-3-tab" data-toggle="pill" href="#v-pills-3"
-                                        role="tab" aria-controls="v-pills-3" aria-selected="false">Question 3</a>
-
-                                    <a class="nav-link" id="v-pills-4-tab" data-toggle="pill" href="#v-pills-4"
-                                  role="tab" aria-controls="v-pills-4" aria-selected="false">Question 4</a> -->
                                     @php $counter ++; @endphp
                                     @endforeach
                                 </div>

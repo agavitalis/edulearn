@@ -38,9 +38,26 @@
                                     <p>Please update your profile to proceed</p>
                                 </div>
                             </div>
+                            <!-- Messages Update-->
+                            <div class="col-md-12 update-successful d-none">
+                                <div class="alert alert-success dark alert-dismissible fade show text-center" role="alert">
+                                    <strong>Success! &nbsp </strong> <span class="success-message">Profile Update Completed, kindly wait while we finalize your application...<span>
+                                    <button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                </div>
+                            </div>
+                            <div class="col-md-12 update-error d-none">
+                                <div class="alert alert-danger dark alert-dismissible fade show text-center" role="alert">
+                                    <strong>Success! &nbsp </strong> Your application cannot be completed, This Scholarship you selected doesnt match your academic Levels
+                                    <button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                </div>
+                            </div>
+
                             <div class="job-description">
                                 <h6 class="mb-0">Personal Details </h6>
                                 <form class="form theme-form">
+                                    @csrf
+                                    <input type="hidden" name="profile_id" id="profile_id" value="{{$studentProfile?->id}}">
+                                    <input type="hidden" name="user_id" id="user_id" value="{{Auth::user()->id}}">
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <div class="form-group">
@@ -90,7 +107,7 @@
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for="exampleFormControlInput5">School Name:<span class="font-danger">*</span></label>
-                                                <input class="form-control" value="{{$studentProfile?->school_name}}"  id="school_name" name="school_name" type="text" placeholder="Your School Name">
+                                                <input class="form-control" value="{{$studentProfile?->school_name}}" id="school_name" name="school_name" type="text" placeholder="Your School Name">
                                             </div>
                                         </div>
 
@@ -129,7 +146,7 @@
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for="exampleFormControlInput8">LGA:<span class="font-danger">*</span></label>
-                                                <input class="form-control" value="{{$studentProfile?->lga}}"  id="lga" name="lga" type="text" placeholder="Local Govt of Origin">
+                                                <input class="form-control" value="{{$studentProfile?->lga}}" id="lga" name="lga" type="text" placeholder="Local Govt of Origin">
                                             </div>
                                         </div>
 
@@ -140,6 +157,8 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <input type="hidden" name="scholarship_id" id="scholarship_id" value="{{$scholarship->id}}">
+                                    <input type="hidden" name="application_fee"  id="application_fee" value="{{$scholarship->application_fee}}">
 
                                 </form>
                             </div>

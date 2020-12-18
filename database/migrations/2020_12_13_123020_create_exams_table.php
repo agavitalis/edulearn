@@ -19,8 +19,9 @@ class CreateExamsTable extends Migration
             $table->string('duration');
             $table->text('description');
             $table->text('instruction');
+            $table->text('number_of_questions');
             $table->boolean('is_active')->default(true);
-            $table->enum('category', array('University', 'Secondary'));
+            $table->enum('category', array('University', 'Secondary School'));
             $table->timestamps();
             $table->softDeletes();
         });

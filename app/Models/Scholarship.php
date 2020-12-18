@@ -29,4 +29,12 @@ class Scholarship extends Model
         return $this->belongsToMany(Exam::class,'exam_scholarship');
     }
 
+     /**
+     * Get the applications that belongs to this user.
+     */
+    public function applications()
+    {
+        return $this->hasMany(Application::class);
+    }
+
 }

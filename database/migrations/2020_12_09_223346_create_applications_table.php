@@ -17,6 +17,7 @@ class CreateApplicationsTable extends Migration
             $table->bigIncrements('id');
             $table->bigInteger('user_id');
             $table->bigInteger('scholarship_id');
+            $table->string('transaction_ref');
             $table->softDeletes();
             $table->timestamps();
         });

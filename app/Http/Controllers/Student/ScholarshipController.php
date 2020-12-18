@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Repositories\Interfaces\ScholarshipRepositoryInterface;
 use App\Repositories\Interfaces\StudentProfileRepositoryInterface;
 use Illuminate\Support\Facades\Auth;
+use Exception;
 
 class ScholarshipController extends Controller
 {
@@ -38,5 +39,56 @@ class ScholarshipController extends Controller
         $studentProfile = $this->studentProfileRepository->getStudentProfile(Auth::user()->id);
 
         return view("student.scholarships.scholarship-application", compact('scholarship','studentProfile'));
+    }
+
+    public function scholarship_update_profile(Request $request){
+
+        try {
+            $this->studentProfileRepository->updateProfile($request);
+        } catch (Exception $e) {
+            
+            $message = $e->getMessage();
+            return response()->json(array(
+                'code'=> 301,
+                'message'=> $message
+            ));
+        }
+      
+        //now allow the investor to withdraw
+        return response()->json(array('code'=>200, 'message'=>"Profile Update Succssfull"));
+    }
+
+    public function finalize_scholarship_application(Request $request){
+
+        try {
+
+            $application = $this->scholarshipRepository->applyForScholarship($request);
+            return response()->json(array(
+                'code'=> 200,
+                'redirect_url'=> "/student/application_success/".$application->id,
+                'message'=> "Application Successful"
+            ));
+
+        } catch (Exception $e) {
+            
+            $message = $e->getMessage();
+            return response()->json(array(
+                'code'=> 301,
+                'message'=> $message
+            ));
+        }
+       
+    }
+
+    public function application_success($application_id){
+
+        return view("student.scholarships.application-success");
+    }
+
+    public function my_applications(){
+
+        $applications = $this->scholarshipRepository->myApplications(Auth::user()->id);
+        //dd($applications->scholarships());
+        return view("student.scholarships.my-applications", compact('applications'));
     }
 }

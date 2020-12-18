@@ -11,24 +11,34 @@ use Illuminate\Http\Request;
  */
 interface ExamRepositoryInterface
 {
-   /**
-    * Get all active scholarships
-    */
-   public function getAllActiveExams();
+    /**
+     * Get all active Exams
+     */
+    public function getAllActiveExams();
 
-   /**
-    * Get all scholarships
-    */
-   public function getAllExams();
+    /**
+     * Get all Exams
+     */
+    public function getAllExams();
 
-   /**
-    * Create Scholarship
-    *@param Request 
-    */
-   public function createExam(Request $request);
+    /**
+     * Create Exam
+     *@param Request 
+     */
+    public function createExam(Request $request);
 
-   /**
-    * @param $scholarship_id
-    */
-   public function getExam($exam_id);
+    /**
+     * @param $exam_id
+     */
+    public function getExam($exam_id);
+
+    /**
+     * @param $scholarship_id
+     */
+    public function getScholarshipExams($scholarship_id);
+
+    /**
+     * @param $scholarship_id
+     */
+    public function getQuestions($scholarship_id);
 }

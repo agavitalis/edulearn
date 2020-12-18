@@ -1,95 +1,226 @@
-@extends('layouts.admin')
-@section('content')
-<div class="page-body">
-    <div class="container-fluid">
-        <div class="page-title">
-            <div class="row">
-                <div class="col-6">
-                    <h3>Examination</h3>
-                </div>
-                <div class="col-6">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.html"> <i data-feather="home"></i></a>
-                        </li>
-                        <li class="breadcrumb-item">Student</li>
-                        <li class="breadcrumb-item active">Examination Instructions </li>
-                    </ol>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Container-fluid starts-->
-    <div class="container-fluid">
-        <div class="row">
-           
-            <div class="col-xl-10 xl-60 offset-1">
-                <div class="card">
-                    <div class="job-search">
-                        <div class="card-body">
-                            <div class="media"><img class="img-40 img-fluid m-r-20"
-                                    src="https://admin.pixelstrap.com/cuba/assets/images/job-search/1.jpg" alt="">
-                                <div class="media-body">
-                                    <h6 class="f-w-600"><a href="#">Verbal Reasoning instructions </a><span
-                                            class="pull-right">
-                                            <button class="btn btn-primary" type="button">Start Exam</button></span></h6>
-                                    <p>Endless - United States<span><i class="fa fa-star font-warning"></i><i
-                                                class="fa fa-star font-warning"></i><i
-                                                class="fa fa-star font-warning"></i><i
-                                                class="fa fa-star font-warning"></i><i
-                                                class="fa fa-star font-warning"></i></span></p>
-                                </div>
-                            </div>
-                            <div class="job-description">
-                                <h6>Exam Description</h6>
-                                <p>Endless is looking for a UI/UX Designer to join our team. The world is seeing an
-                                    explosion in the amount and variety of location-baWe are looking for a versatile
-                                    UX/UI Designer to join our growing design team. Our designers contribute to clients’
-                                    projects at all stages of development. We might start from scratch, conducting user
-                                    and stakeholder interviews, making personas and journey maps, and continue on to
-                                    iterating on designs and prototypes through delivering final assets for launch. We
-                                    might come into the middle of an in-flight program-size project and conduct analysis
-                                    and usability correction or feature enhancement. We might provide research and
-                                    vision for handoff to an internal development team.</p>
-                                <!-- <p>Front-end web designers combine design, programming, writing and organizational skills in their work. They help shape the vision for a company's online content.</p>-->
-                            </div>
-                            <div class="job-description">
-                                <h6>Instructions </h6>
-                                <ul>
-                                    <li>Have shipped multiple iOS, Android, and/or web products </li>
-                                    <li>5+ years UI/UX experience</li>
-                                    <li>Portfolio demonstrating mastery of native iOS, Android, and/or responsive web
-                                        design principles</li>
-                                    <li>Ability to autonomously pursue elegant solutions to open-ended problems</li>
-                                    <li>Comfort with ambiguity</li>
-                                    <li>Proven ability to create interactive prototypes</li>
-                                    <li>Strong verbal communication skills with ability to clearly communicate complex
-                                        ideas and champion a design vision across all levels of an organization</li>
-                                    <li>Strong written communication skills with ability to make transparent design
-                                        documentation and client-facing presentations</li>
-                                    <li>Ability to create and maintain flow charts, wire frames, prototypes, and
-                                        mockups.</li>
-                                    <li>Ability to effectively work on more than one project at a time</li>
-                                    <li>Experience conducting user research and stakeholder interviews</li>
-                                    <li>Solid grasp of standard design tools, ex: Sketch, Omnigraffle, the Adobe Suite,
-                                        Zeplin, etc.</li>
-                                    <li>Bonus Considerations </li>
-                                </ul>
-                            </div>
-                           
-                            <div class="job-description">
-                                <button class="btn btn-danger" type="button"><span><i class="fa fa-tick"></i></span>
-                                    Go Back</button>
-                                <button class="btn btn-primary" type="button"><span><i
-                                            class="fa fa-check"></i></span> Start Exam</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-               
-            </div>
-        </div>
-    </div>
-    <!-- Container-fluid Ends-->
+<!DOCTYPE html>
+<html lang="en">
 
-</div>
-@endsection
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Edulearn Scholarship Recipts">
+    <meta name="keywords" content="scholarship">
+    <meta name="author" content="pixelstrap">
+    <link rel="icon" href="https://admin.pixelstrap.com/cuba/assets/images/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="https://admin.pixelstrap.com/cuba/assets/images/favicon.png" type="image/x-icon">
+    <title>Edulearn| Recipts</title>
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <style type="text/css">
+        body {
+            text-align: center;
+            margin: 0 auto;
+            width: 650px;
+            font-family: work-Sans, sans-serif;
+            background-color: #f6f7fb;
+            display: block;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            display: inline-block;
+            text-decoration: unset;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        p {
+            margin: 15px 0;
+        }
+
+        h5 {
+            color: #444;
+            text-align: left;
+            font-weight: 400;
+        }
+
+        .text-center {
+            text-align: center
+        }
+
+        .main-bg-light {
+            background-color: #fafafa;
+            box-shadow: 0px 0px 14px -4px rgba(0, 0, 0, 0.2705882353);
+        }
+
+        .title {
+            color: #444444;
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding-bottom: 0;
+            text-transform: uppercase;
+            display: inline-block;
+            line-height: 1;
+        }
+
+        table {
+            margin-top: 30px
+        }
+
+        table.top-0 {
+            margin-top: 0;
+        }
+
+        table.order-detail,
+        .order-detail th,
+        .order-detail td {
+            border: 1px solid #ddd;
+            border-collapse: collapse;
+        }
+
+        .order-detail th {
+            font-size: 16px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .footer-social-icon tr td img {
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body style="margin: 20px auto;">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" style="padding: 0 30px;background-color: #fff; -webkit-box-shadow: 0px 0px 14px -4px rgba(0, 0, 0, 0.2705882353);box-shadow: 0px 0px 14px -4px rgba(0, 0, 0, 0.2705882353);width: 100%;">
+        <tbody>
+            <tr>
+                <td>
+                    <table align="center" border="0" cellpadding="0" cellspacing="0">
+                        <tbody>
+                            <tr>
+                                <td><img src="https://admin.pixelstrap.com/cuba/assets/images/email-template/delivery.png" alt="" style="margin-bottom: 30px;"></td>
+                            </tr>
+                            <tr>
+                                <td><img src="https://admin.pixelstrap.com/cuba/assets/images/email-template/success.png" alt=""></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h2 class="title">Application Successful</h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>Your Scholarship application for Rochas International Scheme was successfully processed. Below is your application details:</p>
+                                    <h2 class="title">Ref Number: A234-3454-2344</h2>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div style="border-top:1px solid #777;height:1px;margin-top: 30px;"></div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <h2 class="title">Application Details</h2>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="order-detail" border="0" cellpadding="0" cellspacing="0" align="left">
+                        <tbody>
+                            <tr align="left">
+                                <th>SCHEME</th>
+                                <th style="padding-left: 15px;">CATEGORY</th>
+                                <th>START</th>
+                                <th>END </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3 style="padding:5px;">Rochas Okorocha </h3>
+                                </td>
+                                <td valign="center" style="padding:5px;">
+                                    University
+                                </td>
+                                <td valign="center" style="padding:5px;">
+                                    12th May, 2020
+                                </td>
+                                <td valign="center" style="padding:5px;">
+                                    12th June 2020
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="2" style="line-height: 49px;font-size: 13px;color: #000000;padding-left: 20px;text-align:left;border-right: unset;">Application Fee:</td>
+                                <td class="price" colspan="3" style="line-height: 49px;text-align: right;padding-right: 28px;font-size: 13px;color: #000000;text-align:right;border-left: unset;"><b>NGN 2600.00</b></td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="2" style="line-height: 49px;font-size: 13px;color: #000000;padding-left: 20px;text-align:left;border-right: unset;">TOTAL PAID :</td>
+                                <td class="price" colspan="3" style="line-height: 49px;text-align: right;padding-right: 28px;font-size: 13px;color: #000000;text-align:right;border-left: unset;"><b>NGN 2600.00</b></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table cellpadding="0" cellspacing="0" border="0" align="left" style="width: 100%;margin-top: 30px;    margin-bottom: 30px;">
+                        <tbody>
+                            <tr>
+                                <td style="font-size: 13px; font-weight: 400; color: #444444; letter-spacing: 0.2px;width: 100%;">
+                                    <h5 style="font-size: 16px; font-weight: 500;color: #000; line-height: 16px; padding-bottom: 13px; border-bottom: 1px solid #e6e8eb; letter-spacing: -0.65px; margin-top:0; margin-bottom: 13px;">FUTHER INSTRUCTIONS</h5>
+                                    <p style="text-align: left;font-weight: normal; font-size: 14px; color: #000000;line-height: 21px;    margin-top: 0;">Go to your dashboard, Click on My Application Menu, then kindly select this Scholarship and write the exams attached to it. <br>Winners of this Scholarship will be determined based on exams and other necessary criteria. Good Luck! </p>
+                                </td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="main-bg-light text-center top-0 button-div" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+            <tr>
+                <td style="padding: 30px;">
+
+                    <div style="border-top: 1px solid #ddd; margin: 20px auto 0;"></div>
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin: 20px auto 0;">
+                        <tbody>
+                            <tr>
+                                <td style="font-size: 13px; font-weight: 400; color: #444444; letter-spacing: 0.2px;width: 50%;">
+                                </td>
+                                <td style="font-size: 13px; font-weight: 400; color: #444444; letter-spacing: 0.2px;width: 50%;">
+                                    <button type="button" style="font-size:16px;padding:.5em">Go to My Applications</button>
+                                    <button onClick="printRecipt()" type="button" style="font-size:16px; padding:.5em">Print</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+<script>
+    function printRecipt() {
+        
+        var elem = document.querySelector('.button-div');
+        // set the display to none
+        elem.style.display = 'none';
+        //then print
+        window.print()
+       
+    }
+</script>
+
+</html>

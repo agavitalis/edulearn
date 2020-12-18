@@ -53,14 +53,22 @@
             
                                     <select class="form-control" name="category">
                                     
-                                        <option value="university">University Students</option>
-                                        <option value="secondary">Secondary School Students</option>
+                                        <option value="University">University Students</option>
+                                        <option value="Secondary School">Secondary School Students</option>
                                     
                                     </select>
 
                                 </div>
                     
                                
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 mb-3">
+                                    <label for="validationCustom01">Number of Questions in Exam</label>
+                                    <input class="form-control" type="text"
+                                        name="number_of_questions" placeholder="Number of Questions in this Exam" required="">
+                                </div>
+                                
                             </div>
                             <div class="row">
                                 <div class="col-md-12 mb-3">

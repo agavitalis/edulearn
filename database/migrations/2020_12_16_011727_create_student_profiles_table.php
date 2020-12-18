@@ -19,7 +19,7 @@ class CreateStudentProfilesTable extends Migration
 
             $table->bigInteger('user_id');
             $table->string('phone');
-            $table->enum('category', array('University', 'Secondary'));
+            $table->enum('category', array('University', 'Secondary School'));
             $table->string('school_name');
             $table->string('level');
             $table->string('exp_year_of_graduation');

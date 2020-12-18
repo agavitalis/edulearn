@@ -46,7 +46,7 @@
                     
                 </li>
                 <li class="sidebar-list">
-                    <a class="sidebar-link" href="{{ route('student_scholarships') }}"><i data-feather="calendar"></i><span
+                    <a class="sidebar-link" href="{{ route('student_applications') }}"><i data-feather="calendar"></i><span
                             class="lan-3">My Applications </span></a>
                     
                 </li>

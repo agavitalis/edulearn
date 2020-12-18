@@ -76,8 +76,8 @@
                                                 <div class="form-group">
                                                     <label for="exampleFormControlInput5">I am a:<span class="font-danger">*</span></label>
                                                     <select class="form-control" id="category" name="category">
-                                                        <option value="university">University Student</option>
-                                                        <option value="secondary">Secondary School Student</option>
+                                                        <option value="University">University Student</option>
+                                                        <option value="Secondary School">Secondary School Student</option>
                                                     </select>
 
                                                 </div>

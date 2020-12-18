@@ -43,4 +43,13 @@ interface ScholarshipRepositoryInterface
     */
     public function examAssignedToScholarships();
    
+    /**
+    * apply for scholarship with the needed parmas
+    */
+    public function applyForScholarship(Request $request);
+
+    /**
+    * get all my scholarship applications
+    */
+    public function myApplications($user_id);
 }

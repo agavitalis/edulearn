@@ -28,7 +28,7 @@ class StudentProfileRepository implements StudentProfileRepositoryInterface
 
         if($student_profile){
             StudentProfile::where(['id'=>$request->id])->update([
-                'user_id' => $request->user_id,
+                
                 'phone' => $request->phone,
                 'category' => $request->category,
 

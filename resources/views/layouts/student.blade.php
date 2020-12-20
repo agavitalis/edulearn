@@ -5,8 +5,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Cuba admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
-    <meta name="keywords" content="admin template, Cuba admin template, dashboard template, flat admin template, responsive admin template, web app">
+    <meta name="description" content="EduLearn Scholarship Portal.">
+    <meta name="keywords" content="Scholarship">
     <meta name="author" content="pixelstrap">
     <link rel="icon" href="https://admin.pixelstrap.com/cuba/assets/images/favicon.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://admin.pixelstrap.com/cuba/assets/images/favicon.png" type="image/x-icon">
@@ -187,22 +187,22 @@
     <script src="../../backend/js/config.js"></script>
     <!-- Plugins JS start-->
     <script src="../../backend/js/sidebar-menu.js"></script>
-   <script src="../../backend/js/chart/chartist/chartist.js"></script>
-    <script src="../../backend/js/chart/chartist/chartist-plugin-tooltip.js"></script>
-    <script src="../../backend/js/chart/knob/knob.min.js"></script>
-    <script src="../../backend/js/chart/knob/knob-chart.js"></script>
-    <script src="../../backend/js/chart/apex-chart/apex-chart.js"></script> 
-    <script src="../../backend/js/chart/apex-chart/stock-prices.js"></script>
-    <script src="../../backend/js/notify/bootstrap-notify.min.js"></script>
-    <script src="../../backend/js/dashboard/default.js"></script>
-    <script src="../../backend/js/notify/index.js"></script>
+   <script src="../../backend/js/chartist.js"></script>
+    <script src="../../backend/js/chartist-plugin-tooltip.js"></script>
+    <script src="../../backend/js/knob.min.js"></script>
+    <script src="../../backend/js/knob-chart.js"></script>
+    <script src="../../backend/js/apex-chart.js"></script> 
+    <script src="../../backend/js/stock-prices.js"></script>
+    <script src="../../backend/js/bootstrap-notify.min.js"></script>
+    <script src="../../backend/js/default.js"></script>
+    <script src="../../backend/js/index.js"></script>
     
-    <script src="../../backend/js/editor/ckeditor/ckeditor.js"></script>
-    <script src="../../backend/js/editor/ckeditor/adapters/jquery.js"></script>
-    <script src="../../backend/js/editor/ckeditor/styles.js"></script>
+    <script src="../../backend/js/ckeditor.js"></script>
+    <script src="../../backend/js/jquery.js"></script>
+    <script src="../../backend/js/styles.js"></script>
     <script src="../../backend/js/ckeditor.custom.js"></script>
-    <script src="../../backend/js/datatable/datatables/jquery.dataTables.min.js"></script>
-    <script src="../../backend/js/datatable/datatables/datatable.custom.js"></script>
+    <script src="../../backend/js/jquery.dataTables.min.js"></script>
+    <script src="../../backend/js/datatable.custom.js"></script>
     <script src="../../backend/js/tooltip-init.js"></script>
     @yield('scripts')
     <!-- Plugins JS Ends-->

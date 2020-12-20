@@ -68,12 +68,14 @@
                                                         <div class="col-sm-6 xl-100">
                                                             <div class="card">
                                                                 <div class="media p-20">
-                                                                    <div class="radio radio-primary mr-3">
-                                                                        <input id="radio19" type="radio" name="radio_{{$question_counter}}" value="A">
-                                                                        <label for="radio19"></label>
-                                                                    </div>
                                                                     <div class="media-body">
-                                                                        <h6 class="mt-0 mega-title-badge">Option A</h6>
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input" type="radio" name="radio_{{$question_counter}}" id="exampleRadios1" value="A">
+                                                                            <label class="form-check-label" for="exampleRadios1">
+                                                                                <h6 class="mt-0 mega-title-badge">Option A</h6>
+                                                                            </label>
+                                                                        </div>
+
                                                                         <p>{{$question->option_a}}</p>
                                                                     </div>
                                                                 </div>
@@ -82,12 +84,14 @@
                                                         <div class="col-sm-6 xl-100">
                                                             <div class="card">
                                                                 <div class="media p-20">
-                                                                    <div class="radio radio-secondary mr-3">
-                                                                        <input id="radio20" type="radio" name="radio_{{$question_counter}}" value="B">
-                                                                        <label for="radio20"></label>
-                                                                    </div>
+
                                                                     <div class="media-body">
-                                                                        <h6 class="mt-0 mega-title-badge">Option B</h6>
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input" type="radio" name="radio_{{$question_counter}}" id="exampleRadios1" value="B">
+                                                                            <label class="form-check-label" for="exampleRadios1">
+                                                                                <h6 class="mt-0 mega-title-badge">Option B</h6>
+                                                                            </label>
+                                                                        </div>
                                                                         <p>{{$question->option_b}}</p>
                                                                     </div>
                                                                 </div>
@@ -96,12 +100,14 @@
                                                         <div class="col-sm-6 xl-100">
                                                             <div class="card">
                                                                 <div class="media p-20">
-                                                                    <div class="radio radio-secondary mr-3">
-                                                                        <input id="radio21" type="radio" name="radio_{{$question_counter}}" value="C">
-                                                                        <label for="radio21"></label>
-                                                                    </div>
+
                                                                     <div class="media-body">
-                                                                        <h6 class="mt-0 mega-title-badge">Option C</h6>
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input" type="radio" name="radio_{{$question_counter}}" id="exampleRadios1" value="C">
+                                                                            <label class="form-check-label" for="exampleRadios1">
+                                                                                <h6 class="mt-0 mega-title-badge">Option C</h6>
+                                                                            </label>
+                                                                        </div>
                                                                         <p>{{$question->option_c}}</p>
                                                                     </div>
                                                                 </div>
@@ -110,12 +116,14 @@
                                                         <div class="col-sm-6 xl-100">
                                                             <div class="card">
                                                                 <div class="media p-20">
-                                                                    <div class="radio radio-primary mr-3">
-                                                                        <input id="radio22" type="radio" name="radio_{{$question_counter}}" value="D">
-                                                                        <label for="radio22"></label>
-                                                                    </div>
+                                                                    
                                                                     <div class="media-body">
-                                                                        <h6 class="mt-0 mega-title-badge">Option D </h6>
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input" type="radio" name="radio_{{$question_counter}}" id="exampleRadios1" value="D">
+                                                                            <label class="form-check-label" for="exampleRadios1">
+                                                                                <h6 class="mt-0 mega-title-badge">Option D</h6>
+                                                                            </label>
+                                                                        </div>
                                                                         <p>{{$question->option_d}}</p>
                                                                     </div>
                                                                 </div>
@@ -132,7 +140,7 @@
                                     </div>
                                     @php $question_counter ++; @endphp
                                     @endforeach
-                                  
+
                                 </div>
                             </div>
                         </div>

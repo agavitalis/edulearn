@@ -53,9 +53,12 @@ Route::group(['prefix' => 'student','namespace'=>"Student"], function()
     ->middleware('auth')
     ->name('student_exam_instructions');
 
-
     Route::get('/examination/{exam_id}', [ExaminationController::class, 'exam'])
     ->middleware('auth')
     ->name('student_exam');
+
+    Route::post('/exam-answer', [ExaminationController::class, 'exam_answer'])
+    ->middleware('auth')
+    ->name('student_exam_answer');
 
 });

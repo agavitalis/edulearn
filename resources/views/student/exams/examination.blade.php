@@ -23,8 +23,14 @@
         <div class="row">
             <div class="col-sm-12 xl-100">
                 <div class="card">
-                    <div class="card-header">
-                        <h5>Questions</h5><span>Exam Questions Starts Here</span>
+                    <div class="card-header d-flex">
+                        <div class="w-50">
+                            <h5>Questions</h5><span>Exam Questions Starts Here</span>
+                        </div>
+                        <div class="w-50 text-right">
+                            <h5>Time</h5><span class="text-danger">0:00:00</span>
+                        </div>
+
                     </div>
                     <div class="card-body">
                         <div class="row">
@@ -70,8 +76,8 @@
                                                                 <div class="media p-20">
                                                                     <div class="media-body">
                                                                         <div class="form-check">
-                                                                            <input class="form-check-input" type="radio" name="radio_{{$question_counter}}" id="exampleRadios1" value="A">
-                                                                            <label class="form-check-label" for="exampleRadios1">
+                                                                            <input class="form-check-input answerRadio" type="radio" name="radio_{{$question_counter}}" data-id="{{$question->id}}" value="A" {{$question->student_answer == 'A'? 'checked': ''}}>
+                                                                            <label class="form-check-label" for="{{$question->id}}">
                                                                                 <h6 class="mt-0 mega-title-badge">Option A</h6>
                                                                             </label>
                                                                         </div>
@@ -87,8 +93,8 @@
 
                                                                     <div class="media-body">
                                                                         <div class="form-check">
-                                                                            <input class="form-check-input" type="radio" name="radio_{{$question_counter}}" id="exampleRadios1" value="B">
-                                                                            <label class="form-check-label" for="exampleRadios1">
+                                                                            <input class="form-check-input answerRadio" type="radio" name="radio_{{$question_counter}}" data-id="{{$question->id}}" value="B" {{$question->student_answer == 'B'? 'checked': ''}} />
+                                                                            <label class="form-check-label" for="{{$question->id}}">
                                                                                 <h6 class="mt-0 mega-title-badge">Option B</h6>
                                                                             </label>
                                                                         </div>
@@ -103,8 +109,8 @@
 
                                                                     <div class="media-body">
                                                                         <div class="form-check">
-                                                                            <input class="form-check-input" type="radio" name="radio_{{$question_counter}}" id="exampleRadios1" value="C">
-                                                                            <label class="form-check-label" for="exampleRadios1">
+                                                                            <input class="form-check-input answerRadio" type="radio" name="radio_{{$question_counter}}" data-id="{{$question->id}}" value="C" {{$question->student_answer == 'C'? 'checked': ''}}>
+                                                                            <label class="form-check-label" for="{{$question->id}}">
                                                                                 <h6 class="mt-0 mega-title-badge">Option C</h6>
                                                                             </label>
                                                                         </div>
@@ -116,11 +122,11 @@
                                                         <div class="col-sm-6 xl-100">
                                                             <div class="card">
                                                                 <div class="media p-20">
-                                                                    
+
                                                                     <div class="media-body">
                                                                         <div class="form-check">
-                                                                            <input class="form-check-input" type="radio" name="radio_{{$question_counter}}" id="exampleRadios1" value="D">
-                                                                            <label class="form-check-label" for="exampleRadios1">
+                                                                            <input class="form-check-input answerRadio" type="radio" name="radio_{{$question_counter}}" data-id="{{$question->id}}" value="D" {{$question->student_answer == 'D'? 'checked': ''}}>
+                                                                            <label class="form-check-label" for="{{$question->id}}">
                                                                                 <h6 class="mt-0 mega-title-badge">Option D</h6>
                                                                             </label>
                                                                         </div>
@@ -140,7 +146,7 @@
                                     </div>
                                     @php $question_counter ++; @endphp
                                     @endforeach
-
+                                    @csrf
                                 </div>
                             </div>
                         </div>
@@ -154,32 +160,9 @@
 </div>
 @endsection
 @section('scripts')
+<script src="../../backend/student/exam.js"></script>
 <script>
-    function openNextTab() {
 
-        let str = $('.tab-pane.active').attr('id')
-        let res = str.split("-");
-        let id = Number(res[2]) + 1
-
-        if (id > 4) {
-            id = 4
-        }
-
-        $(`#v-pills-tab a[href="#v-pills-${id}"]`).tab('show') // Select tab by name
-    }
-
-    function openPreviousTab() {
-
-        let str = $('.tab-pane.active').attr('id')
-        let res = str.split("-");
-        let id = Number(res[2]) - 1
-
-        if (id < 1) {
-            id = 1
-        }
-
-        $(`#v-pills-tab a[href="#v-pills-${id}"]`).tab('show') // Select tab by name
-    }
 </script>
 
 @endsection

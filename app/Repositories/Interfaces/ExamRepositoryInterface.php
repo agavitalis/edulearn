@@ -56,4 +56,10 @@ interface ExamRepositoryInterface
      * @param $exam_id, $user_id, $written_exam_id
      */
     public function getSelectedQuestions($exam_id, $user_id, $written_exam_id);
+
+    /**
+     * Create Exam
+     *@param Request 
+     */
+    public function updateStudentAnswer(Request $request);
 }

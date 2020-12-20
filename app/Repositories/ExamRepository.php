@@ -130,4 +130,29 @@ class ExamRepository implements ExamRepositoryInterface
         $questions = SelectedQuestion::where(['exam_id' => $exam_id, 'user_id' => $user_id, 'written_exam_id' => $written_exam_id])->take(60)->InRandomOrder()->get();
         return $questions;
     }
+
+    /**
+     * @param Request
+     */
+    public function updateStudentAnswer(Request $request)
+    {
+        $student_answer = SelectedQuestion::where(['id' => $request->seleted_question_id])
+        ->update([ 'student_answer' => $request->student_answer]);
+
+        return $student_answer;
+    }
+
+      /**
+     * @param Request
+     */
+    public function endExam(Request $request)
+    {
+        $written_exam_id = session('written_exam_id');
+        $end_exam = WrittenExam::where(['id' => $written_exam_id])
+        ->update([ 'is_finished' => 1]);
+        
+        return $end_exam;
+    }
+
+    
 }

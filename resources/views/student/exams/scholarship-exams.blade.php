@@ -5,7 +5,7 @@
         <div class="page-title">
             <div class="row">
                 <div class="col-6">
-                    <h3>Scholarship Exams</h3>
+                    <h3>Scholarship Exams for Rochas Okorocha Scholarship</h3>
                 </div>
                 <div class="col-6">
                     <ol class="breadcrumb">
@@ -21,7 +21,6 @@
     <!-- Container-fluid starts-->
     <div class="container-fluid">
         <div class="row">
-        <h3>Exams for Rocha Okorocha Scholarship</h3>
             <div class="col-xl-10 xl-80 offset-1 mt-5">
                 <div class="row">
                     @foreach($exams as $exam)

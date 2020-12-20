@@ -50,7 +50,7 @@
                     <div class="form-group w-100">
                         <div class="Typeahead Typeahead--twitterUsers">
                             <div class="u-posRelative">
-                                <input class="demo-input Typeahead-input form-control-plaintext w-100" type="text" placeholder="Search Cuba .." name="q" title="" autofocus>
+                                <input class="demo-input Typeahead-input form-control-plaintext w-100" type="text" placeholder="Search Edulearn .." name="" title="" autofocus>
                                 <div class="spinner-border Typeahead-spinner" role="status"><span class="sr-only">Loading...</span></div><i class="close-search" data-feather="x"></i>
                             </div>
                             <div class="Typeahead-menu"></div>
@@ -58,7 +58,7 @@
                     </div>
                 </form>
                 <div class="header-logo-wrapper">
-                    <div class="logo-wrapper"><a href="index.html"><img class="img-fluid" src="https://admin.pixelstrap.com/cuba/assets/images/logo/logo.png" alt=""></a></div>
+                    <div class="logo-wrapper"><a href="index.html"><img class="img-fluid" src="../../appp/images/logo.png" alt=""></a></div>
                     <div class="toggle-sidebar"><i class="status_toggle middle sidebar-toggle" data-feather="sliders"></i></div>
                 </div>
                 <div class="left-header col horizontal-wrapper pl-0">
@@ -74,8 +74,6 @@
                                         <li><a href="file-manager.html" data-original-title="" title=""> <i data-feather="user-check"></i><span>Users Cards</span></a></li>
                                     </ul>
                                 </li>
-                                <li><a href="kanban.html" data-original-title="" title=""> <i data-feather="airplay"></i><span>Kanban Board</span></a></li>
-                                <li><a href="bookmark.html" data-original-title="" title=""> <i data-feather="heart"></i><span>Bookmark</span></a></li>
                                 <li><a href="social-app.html" data-original-title="" title=""> <i data-feather="zap"></i><span>Social App </span></a></li>
                             </ul>
                         </li>

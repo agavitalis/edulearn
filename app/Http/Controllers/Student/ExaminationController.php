@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Repositories\Interfaces\ScholarshipRepositoryInterface;
 use App\Repositories\Interfaces\ExamRepositoryInterface;
 use Illuminate\Support\Facades\Auth;
+use Exception;
 
 class ExaminationController extends Controller
 {
@@ -42,23 +43,45 @@ class ExaminationController extends Controller
         $user_id = Auth::user()->id;
         $application_id = session('application_id');
 
-        //check if he has written this exam before, for this scholsrship
-        //and for this application
         $written_exam = $this->examRepository->getWrittenExam($user_id, $exam_id, $application_id);
         if($written_exam == null){
-            //create this exam as written
+           
             $written_exam = $this->examRepository->createWrittenExam($user_id, $exam_id, $application_id);
+            //set written exam in session
+            session(['written_exam_id' => $written_exam->id]);
             $questions = $this->examRepository->getQuestions($exam_id, $user_id,$written_exam->id);
             return view('student.exams.examination',compact('questions','written_exam'));
         }else{
 
-            //check if his time have elasped
 
+            if($written_exam->is_finished > 0){
+                return back()->with('errors', "This exam have been already been concluded");
+            }
 
-            //then get his questions if his time havnt ellapsed
+            //then get his questions if his time havnt ellapsed and set session
+            session(['written_exam_id' => $written_exam->id]);
+            
             $questions = $this->examRepository->getSelectedQuestions($exam_id, $user_id,$written_exam->id);
             return view('student.exams.examination',compact('questions','written_exam'));
         }
 
+    }
+
+
+    public function exam_answer(Request $request){
+
+        try {
+            $this->examRepository->updateStudentAnswer($request);
+            return response()->json(array('code'=>200, 'message'=>"Answer updated"));
+
+        } catch (Exception $e) {
+            
+            $message = $e->getMessage();
+            return response()->json(array(
+                'code'=> 301,
+                'message'=> $message
+            ));
+        }
+          
     }
 }

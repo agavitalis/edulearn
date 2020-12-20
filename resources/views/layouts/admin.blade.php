@@ -68,7 +68,7 @@
                 </form>
                 <div class="header-logo-wrapper">
                     <div class="logo-wrapper"><a href="index.html"><img class="img-fluid"
-                                src="https://admin.pixelstrap.com/cuba/assets/images/logo/logo.png" alt=""></a></div>
+                                src="../../appp/images/logo.png" alt=""></a></div>
                     <div class="toggle-sidebar"><i class="status_toggle middle sidebar-toggle"
                             data-feather="sliders"></i></div>
                 </div>

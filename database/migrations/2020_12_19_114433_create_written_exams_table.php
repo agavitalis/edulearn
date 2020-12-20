@@ -14,16 +14,17 @@ class CreateWrittenExamsTable extends Migration
     public function up()
     {
         Schema::create('written_exams', function (Blueprint $table) {
-
             $table->bigIncrements('id');
+
+            $table->bigInteger('user_id');
             $table->bigInteger('exam_id');
             $table->bigInteger('application_id');
 
-            $table->integer('is_started');
-            $table->string('start_time');
+            $table->integer('is_started')->default(1);
+            $table->string('start_time')->dafault(0);
 
-            $table->integer('is_finished');
-            $table->string('finish_time');
+            $table->integer('is_finished')->default(0);
+            $table->string('finish_time')->dafault(0);
 
             $table->timestamps();
         });

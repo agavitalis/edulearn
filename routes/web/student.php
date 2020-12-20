@@ -45,7 +45,7 @@ Route::group(['prefix' => 'student','namespace'=>"Student"], function()
     ->name('student_applications');
 
 
-    Route::get('/scholarship-exams/{scholarship_id}', [ExaminationController::class, 'scholarship_exams'])
+    Route::get('/scholarship-exams/{id}', [ExaminationController::class, 'scholarship_exams'])
     ->middleware('auth')
     ->name('student_scholarship_exams');
 

@@ -5,6 +5,9 @@ namespace App\Repositories;
 use App\Repositories\Interfaces\ExamRepositoryInterface;
 use App\Models\Exam;
 use App\Models\Scholarship;
+use App\Models\WrittenExam;
+use App\Models\SelectedQuestion;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 
@@ -61,11 +64,70 @@ class ExamRepository implements ExamRepositoryInterface
     }
 
     /**
-     * @param $exam_id
+     * @param $exam_id, $user_id, $application_id
      */
-    public function getQuestions($exam_id)
+    public function createWrittenExam($user_id, $exam_id, $application_id)
     {
-        return Exam::find($exam_id)->questions()->take(60)->InRandomOrder()->get();
-     
+        $exam = $this->getExam($exam_id);
+        
+        $written_exam = WrittenExam::create([
+            'exam_id' => $exam_id,
+            'application_id' => $application_id,
+            'user_id' => $user_id,
+            'start_time'=> Carbon::now(),
+            'finish_time'=> Carbon::now()->addSeconds($exam->duration),
+        ]);
+
+        return $written_exam;
+    }
+
+    /**
+     * @param $exam_id, $user_id, $application_id
+     */
+    public function getWrittenExam($user_id, $exam_id, $application_id)
+    {
+        $written_exam = WrittenExam::where([
+            'exam_id' => $exam_id,
+            'application_id' => $application_id,
+            'user_id' => $user_id,
+        ])->first();
+
+        return $written_exam;
+    }
+
+    /**
+     * @param $exam_id,$user_id,$written_exam_id
+     */
+    public function getQuestions($exam_id, $user_id, $written_exam_id)
+    {
+
+        $selected_questions = Exam::find($exam_id)->questions()->take(60)->InRandomOrder()->get();
+        foreach ($selected_questions as $question) {
+
+            SelectedQuestion::create([
+                'question' => $question->question,
+                'option_a' => $question->option_a,
+                'option_b' => $question->option_b,
+                'option_c' => $question->option_c,
+                'option_d' => $question->option_d,
+                'answer' => $question->answer,
+                'question_id' => $question->id,
+                'exam_id' => $question->exam_id,
+                'written_exam_id' => $written_exam_id,
+                'user_id' => $user_id,
+            ]);
+        }
+
+        $questions = SelectedQuestion::where(['exam_id' => $exam_id, 'user_id' => $user_id, 'written_exam_id' => $written_exam_id])->take(60)->InRandomOrder()->get();
+        return $questions;
+    }
+
+    /**
+     * @param $exam_id,$user_id,$written_exam_id
+     */
+    public function getSelectedQuestions($exam_id, $user_id, $written_exam_id)
+    {
+        $questions = SelectedQuestion::where(['exam_id' => $exam_id, 'user_id' => $user_id, 'written_exam_id' => $written_exam_id])->take(60)->InRandomOrder()->get();
+        return $questions;
     }
 }

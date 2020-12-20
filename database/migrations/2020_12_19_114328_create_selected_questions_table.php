@@ -22,11 +22,12 @@ class CreateSelectedQuestionsTable extends Migration
             $table->text('option_c');
             $table->text('option_d');
             $table->text('answer');
-            $table->text('student_answer');
+            $table->text('student_answer')->nullable();
 
             $table->bigInteger('question_id');
             $table->bigInteger('exam_id');
             $table->bigInteger('written_exam_id');
+            $table->bigInteger('user_id');
             $table->boolean('is_active')->default(true);
             
             $table->timestamps();

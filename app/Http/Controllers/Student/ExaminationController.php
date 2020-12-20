@@ -19,7 +19,13 @@ class ExaminationController extends Controller
         $this->examRepository = $examRepository;
     }
 
-    public function scholarship_exams($scholarship_id = null){
+    public function scholarship_exams($id = null){
+
+        $id = explode("_", $id);
+        $scholarship_id = $id[0];
+        $application_id = $id[1];
+        //set application id as session
+        session(['application_id' => $application_id]);
 
         $exams = $this->examRepository->getScholarshipExams($scholarship_id);
         return view('student.exams.scholarship-exams', compact('exams'));
@@ -33,8 +39,26 @@ class ExaminationController extends Controller
 
     public function exam($exam_id = null){
 
-        $questions = $this->examRepository->getQuestions($exam_id);
-       // dd($questions);
-        return view('student.exams.examination',compact('questions'));
+        $user_id = Auth::user()->id;
+        $application_id = session('application_id');
+
+        //check if he has written this exam before, for this scholsrship
+        //and for this application
+        $written_exam = $this->examRepository->getWrittenExam($user_id, $exam_id, $application_id);
+        if($written_exam == null){
+            //create this exam as written
+            $written_exam = $this->examRepository->createWrittenExam($user_id, $exam_id, $application_id);
+            $questions = $this->examRepository->getQuestions($exam_id, $user_id,$written_exam->id);
+            return view('student.exams.examination',compact('questions','written_exam'));
+        }else{
+
+            //check if his time have elasped
+
+
+            //then get his questions if his time havnt ellapsed
+            $questions = $this->examRepository->getSelectedQuestions($exam_id, $user_id,$written_exam->id);
+            return view('student.exams.examination',compact('questions','written_exam'));
+        }
+
     }
 }

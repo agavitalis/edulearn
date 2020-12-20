@@ -43,9 +43,9 @@
                                         <div class="job-description">
                                             <a href="scholarship/{{$application->scholarship->id}}" class="btn btn-light btn-sm" type="button"><span><i class="fa fa-eye"></i></span>
                                                 View Details</a>
-                                            <a class="btn btn-info btn-sm" href="application_success/{{$application->id}}"><span><i class="fa fa-print"></i></span>
+                                            <a class="btn btn-info btn-sm" href="/student/application_success/{{$application->id}}"><span><i class="fa fa-print"></i></span>
                                                 Payment Recipt</a>
-                                            <a class="btn btn-primary btn-sm" href="scholarship-exams/{{$application->scholarship->id}}"><span><i class="fa fa-check"></i></span>
+                                            <a class="btn btn-primary btn-sm" href="/student/scholarship-exams/{{$application->scholarship->id}}_{{$application->id}}"><span><i class="fa fa-check"></i></span>
                                                 Take Exams</a>
                                         </div>
                                     </div>

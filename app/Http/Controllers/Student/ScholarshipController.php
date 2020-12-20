@@ -88,7 +88,6 @@ class ScholarshipController extends Controller
     public function my_applications(){
 
         $applications = $this->scholarshipRepository->myApplications(Auth::user()->id);
-        //dd($applications->scholarships());
         return view("student.scholarships.my-applications", compact('applications'));
     }
 }

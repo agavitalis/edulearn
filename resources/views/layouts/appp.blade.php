@@ -289,6 +289,7 @@
                             <li><a href="/about"><i class="fa fa-angle-right" aria-hidden="true"></i>About</a></li>
                             <li><a href="/scholarship"><i class="fa fa-angle-right" aria-hidden="true"></i>Scholarships</a> </li>
                             <li><a href="/faq"><i class="fa fa-angle-right" aria-hidden="true"></i>Faqs</a> </li>
+                            <li><a href="/team"><i class="fa fa-angle-right" aria-hidden="true"></i>Team</a> </li>
                             <li><a href="/contacts"><i class="fa fa-angle-right" aria-hidden="true"></i>Contacts</a> </li>
                            
                             
@@ -354,6 +355,12 @@
                 
             </li>
             <!--Courses Menu End-->
+
+             <!--Courses Menu Star-->
+             <li class=""><a href="/team">Team</a>
+                
+                </li>
+                <!--Courses Menu End-->
 
           
             <li><a href="contact.html">Contact<span class="icon"></span></a></li>

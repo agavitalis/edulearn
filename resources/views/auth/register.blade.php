@@ -6,7 +6,7 @@
   <div class="col-xl-5 p-0">
     <div class="login-card">
       <div>
-        <div><a class="logo text-left" href="index.html"><img class="img-fluid for-light" src="../appp/images/logo.png" alt="looginpage"><img class="img-fluid for-dark" src="https://admin.pixelstrap.com/cuba/assets/images/logo/logo_dark.png" alt="looginpage"></a></div>
+        <div><a class="logo text-left" href="/"><img class="img-fluid for-light" src="../appp/images/logo.png" alt="looginpage"><img class="img-fluid for-dark" src="https://admin.pixelstrap.com/cuba/assets/images/logo/logo_dark.png" alt="looginpage"></a></div>
         <div class="login-main">
           <!-- Validation Errors -->
           @if ($errors->any())

@@ -40,13 +40,13 @@
                                             <div class="col-lg-6">
                                                 <div class="form-group">
                                                     <label for="exampleFormControlInput5">First Name:<span class="font-danger">*</span></label>
-                                                    <input class="form-control" id="first_name" name="first_name" type="text" placeholder="First Name">
+                                                    <input class="form-control" value="{{Auth::user()->first_name}}" id="first_name" name="first_name" type="text" required placeholder="First Name">
                                                 </div>
                                             </div>
                                             <div class="col-lg-6">
                                                 <div class="form-group">
                                                     <label for="exampleFormControlInput5">Last Name:<span class="font-danger">*</span></label>
-                                                    <input class="form-control" id="last_name" name="last_name" type="text" placeholder="Last Name">
+                                                    <input class="form-control" value="{{Auth::user()->last_name}}" id="last_name" name="last_name" type="text" required placeholder="Last Name">
                                                 </div>
                                             </div>
 
@@ -55,13 +55,13 @@
                                             <div class="col-lg-6">
                                                 <div class="form-group">
                                                     <label for="exampleFormControlInput5">Email Address:<span class="font-danger">*</span></label>
-                                                    <input class="form-control" id="email" name="email" type="email" placeholder="Email Address">
+                                                    <input class="form-control"  value="{{Auth::user()->email}}" disabled id="email" name="email" type="email" required placeholder="Email Address">
                                                 </div>
                                             </div>
                                             <div class="col-lg-6">
                                                 <div class="form-group">
                                                     <label for="exampleFormControlInput5">Phone:<span class="font-danger">*</span></label>
-                                                    <input class="form-control" id="phone" name="phone" type="tel" placeholder="Valid Phone Number">
+                                                    <input class="form-control" value="{{$studentProfile?->phone}}" id="phone" name="phone" type="tel" required placeholder="Valid Phone Number">
                                                 </div>
                                             </div>
 
@@ -75,7 +75,7 @@
                                             <div class="col-lg-6">
                                                 <div class="form-group">
                                                     <label for="exampleFormControlInput5">I am a:<span class="font-danger">*</span></label>
-                                                    <select class="form-control" id="category" name="category">
+                                                    <select class="form-control" id="category" name="category" required >
                                                         <option value="University">University Student</option>
                                                         <option value="Secondary School">Secondary School Student</option>
                                                     </select>
@@ -85,21 +85,21 @@
                                             <div class="col-lg-6">
                                                 <div class="form-group">
                                                     <label for="exampleFormControlInput5">School Name:<span class="font-danger">*</span></label>
-                                                    <input class="form-control" id="school_name" name="school_name" type="text" placeholder="Your School Name">
+                                                    <input class="form-control" value="{{$studentProfile?->school_name}}" id="school_name" name="school_name" type="text" required placeholder="Your School Name">
                                                 </div>
                                             </div>
 
                                             <div class="col-lg-6">
                                                 <div class="form-group">
                                                     <label for="exampleFormControlInput5">Class or Level:<span class="font-danger">*</span></label>
-                                                    <input class="form-control" id="level" name="level" type="text" placeholder="Year of Study">
+                                                    <input class="form-control" value="{{$studentProfile?->level}}" id="level" name="level" type="text" required placeholder="Year of Study">
                                                 </div>
                                             </div>
 
                                             <div class="col-lg-6">
                                                 <div class="form-group">
                                                     <label for="exampleFormControlInput5">Expected Year of Graduation:<span class="font-danger">*</span></label>
-                                                    <input class="form-control" id="exp_year_of_graduation" name="exp_year_of_graduation" type="text" placeholder="Year of Graduation">
+                                                    <input class="form-control" value="{{$studentProfile?->exp_year_of_graduation}}" id="exp_year_of_graduation" required name="exp_year_of_graduation" type="text" placeholder="Year of Graduation">
                                                 </div>
                                             </div>
 
@@ -111,27 +111,27 @@
                                             <div class="col-lg-6">
                                                 <div class="form-group">
                                                     <label for="exampleFormControlInput7">Country:<span class="font-danger">*</span></label>
-                                                    <input class="form-control" id="country" name="country" type="text" placeholder="Country">
+                                                    <input class="form-control" value="{{$studentProfile?->country}}" id="country" name="country" required type="text" placeholder="Country">
                                                 </div>
                                             </div>
                                             <div class="col-lg-6">
                                                 <div class="form-group">
                                                     <label for="exampleFormControlInput7">State of Origin:<span class="font-danger">*</span></label>
-                                                    <input class="form-control" id="state_of_orgin" name="state_of_orgin" type="text" placeholder="State of Origin">
+                                                    <input class="form-control" value="{{$studentProfile?->state_of_orgin}}" id="state_of_orgin" required name="state_of_orgin" type="text" placeholder="State of Origin">
                                                 </div>
                                             </div>
 
                                             <div class="col-lg-6">
                                                 <div class="form-group">
                                                     <label for="exampleFormControlInput8">LGA:<span class="font-danger">*</span></label>
-                                                    <input class="form-control" id="lga" name="lga" type="text" placeholder="Local Govt of Origin">
+                                                    <input class="form-control" value="{{$studentProfile?->lga}}" id="lga" name="lga" type="text" required placeholder="Local Govt of Origin">
                                                 </div>
                                             </div>
 
                                             <div class="col-lg-6">
                                                 <div class="form-group">
                                                     <label for="exampleFormControlInput8">Residential Address:<span class="font-danger">*</span></label>
-                                                    <input class="form-control" id="address" name="address" type="text" placeholder="Residential Address">
+                                                    <input class="form-control" value="{{$studentProfile?->address}}" id="address" name="address" type="text" required placeholder="Residential Address">
                                                 </div>
                                             </div>
                                         </div>

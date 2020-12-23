@@ -98,5 +98,13 @@ class ScholarshipRepository implements ScholarshipRepositoryInterface
         $applications = Application::where(['user_id' => $user_id])->get();
         return $applications;
     }
+
+    /**
+    * Get all active scholarships
+    */
+    public function getAllApplications()
+    {
+        return Application::all();
+    } 
  
 }

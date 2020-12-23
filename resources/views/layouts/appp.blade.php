@@ -77,7 +77,8 @@
                                     <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                                 </ul>
                             </div>
-                            <a href="/register" class="apply-btn">Join Now</a>
+                            <a href="/register" class="apply-btn">Join Now</a> ||
+                            <a href="/login" class="apply-btn">Login</a>
                         </div>
                     </div>
                 </div>

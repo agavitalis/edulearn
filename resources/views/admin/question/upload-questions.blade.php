@@ -61,7 +61,7 @@
 
                             <hr>
                             <div class="form-group text-right">
-                                <button type="button" class="btn btn-outline-info" value="">Download Sample Upload Template File</button>
+                                <a href="{{asset('UploadTemplateCBT.xlsx')}}" type="button" class="btn btn-outline-info" value="">Download Sample Upload Template File</a>
                                 <button type="submit" class="btn btn-primary " value="">Upload Questions</button>
                             </div>
 

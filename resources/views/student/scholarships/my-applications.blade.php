@@ -23,11 +23,12 @@
         <div class="row">
             <div class="col-xl-10 xl-80 offset-1 mt-5">
                 <div class="row">
+                    @if($applications->count() > 0)
                     @foreach($applications as $application)
                     <div class="col-xl-6">
                         <div class="card">
                             <div class="blog-box blog-list row">
-                               
+
                                 <div class="col-sm-12">
                                     <div class="blog-details p-3">
                                         <div class="blog-date"><span>{{$application->scholarship->name}}</span></div>
@@ -37,7 +38,7 @@
                                                 <li>Start Date: {{\Carbon\Carbon::parse($application->scholarship->end_date)->isoFormat('MMM Do YYYY')}}</li>
                                                 <li>End Date: {{\Carbon\Carbon::parse($application->scholarship->end_date)->isoFormat('MMM Do YYYY')}} </li>
                                             </ul>
-                                            
+
                                         </div>
                                         <hr>
                                         <div class="job-description">
@@ -54,6 +55,35 @@
                         </div>
                     </div>
                     @endforeach
+
+                    @else
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="card box-shadow-title">
+                                    <div class="card-header">
+                                        <h5>Opps</h5><span> seems you havn't applied for any scholarship yet!</span>
+                                    </div>
+                                    <div class="card-body row p-5">
+                                        <div class="col-12">
+                                            <h6 class="sub-title mt-0">Notice::</h6>
+                                        </div>
+
+                                        <div class="col-md-6 offset-md-3">
+                                            <div class="shadow-lg p-25 shadow-showcase text-center">
+                                                <h5 class="m-0 f-18">Scholarships that you applied for, will be displayed here.</h5>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    @endif
+
+
                 </div>
             </div>
         </div>

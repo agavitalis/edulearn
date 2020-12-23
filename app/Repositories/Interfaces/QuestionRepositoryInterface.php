@@ -14,6 +14,11 @@ interface QuestionRepositoryInterface
     /**
      * Get all active questions
      */
+    public function getAllQuestions();
+
+    /**
+     * Get all active questions
+     */
     public function getActiveExamQuestions($exam_id);
 
     /**

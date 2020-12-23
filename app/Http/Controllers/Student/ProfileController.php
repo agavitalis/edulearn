@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Student;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Repositories\Interfaces\StudentProfileRepositoryInterface;
 
 class ProfileController extends Controller
@@ -19,7 +20,9 @@ class ProfileController extends Controller
     public function profile(Request $request){
 
         if($request->isMethod('GET')){
-            return view("student.profile");
+
+            $studentProfile = $this->studentProfileRepository->getStudentProfile(Auth::user()->id);
+            return view("student.profile", compact('studentProfile'));
         }
 
         $this->studentProfileRepository->updateProfile($request);

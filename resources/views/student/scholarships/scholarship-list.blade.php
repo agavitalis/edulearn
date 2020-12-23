@@ -23,6 +23,7 @@
         <div class="row">
             <div class="col-xl-10 xl-80 offset-1 mt-5">
                 <div class="row">
+                    @if($scholarships->count() > 0)
                     @foreach($scholarships as $scholarship)
                     <div class="col-xl-12">
                         <div class="card">
@@ -44,9 +45,9 @@
                                         </div>
                                         <hr>
                                         <div class="job-description text-right">
-                                            <a href="scholarship/{{$scholarship->id}}" class="btn btn-light" type="button"><span><i class="fa fa-back"></i></span>
+                                            <a href="/student/scholarship/{{$scholarship->id}}" class="btn btn-light" type="button"><span><i class="fa fa-back"></i></span>
                                                 View Details</a>
-                                            <a class="btn btn-primary" href="scholarship-application/1"><span><i class="fa fa-check"></i></span>
+                                            <a class="btn btn-primary" href="/student/scholarship-application/{{$scholarship->id}}"><span><i class="fa fa-check"></i></span>
                                                 Apply</a>
                                         </div>
                                     </div>
@@ -55,6 +56,32 @@
                         </div>
                     </div>
                     @endforeach
+                    @else
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="card box-shadow-title">
+                                    <div class="card-header">
+                                        <h5>Opps</h5><span> there is no scholarships here yet!</span>
+                                    </div>
+                                    <div class="card-body row p-5">
+                                        <div class="col-12">
+                                            <h6 class="sub-title mt-0">Notice::</h6>
+                                        </div>
+
+                                        <div class="col-md-6 offset-md-3">
+                                            <div class="shadow-lg p-25 shadow-showcase text-center">
+                                                <h5 class="m-0 f-18">Avaliable Scholarships will be displayed here.</h5>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    @endif
                 </div>
             </div>
         </div>

@@ -41,8 +41,8 @@
             </div>
             <div class="form-group">
               <label class="col-form-label">Password</label>
-              <input class="form-control" type="password" name="password" required="" placeholder="*********">
-              <div class="show-hide"><span class="show"> </span></div>
+              <input class="form-control" type="password" name="password" required="" >
+             
             </div>
             <div class="form-group mb-0">
               <div class="checkbox p-0">

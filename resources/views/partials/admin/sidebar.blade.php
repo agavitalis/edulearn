@@ -1,5 +1,5 @@
 <div class="sidebar-wrapper">
-    <div class="logo-wrapper"><a href="index.html"><img class="img-fluid for-light" src="https://admin.pixelstrap.com/cuba/assets/images/logo/logo.png" alt=""><img class="img-fluid for-dark" src="https://admin.pixelstrap.com/cuba/assets/images/logo/logo_dark.png" alt=""></a>
+    <div class="logo-wrapper"><a href="index.html"><img class="img-fluid for-light" src="../../appp/images/logo.png" alt=""><img class="img-fluid for-dark" src="https://admin.pixelstrap.com/cuba/assets/images/logo/logo_dark.png" alt=""></a>
         <div class="back-btn"><i class="fa fa-angle-left"></i></div>
         <div class="toggle-sidebar"><i class="status_toggle middle sidebar-toggle" data-feather="grid"> </i>
         </div>
@@ -45,8 +45,8 @@
                 <li class="sidebar-list">
                     <a class="sidebar-link sidebar-title" href="#"><i data-feather="edit"></i><span class="lan-3">Applications </span></a>
                     <ul class="sidebar-submenu">
-                        <li><a class="lan-4" href="register-scholarship">View Applications</a></li>
-
+                        <li><a class="lan-4" href="#">View Applications</a></li>
+                        <li><a class="lan-4" href="#">Manage Applications</a></li>
                     </ul>
                 </li>
                 <li class="sidebar-main-title">
@@ -66,7 +66,7 @@
                     <a class="sidebar-link sidebar-title" href="#"><i data-feather="clipboard"></i><span class="lan-3">Questions </span></a>
                     <ul class="sidebar-submenu">
                         <li><a class="lan-4" href="upload-questions">Upload Questions</a></li>
-                        <li><a class="lan-5" href="upload-examinations">Manage Questions</a></li>
+                        <li><a class="lan-5" href="#">Manage Questions</a></li>
                     </ul>
                 </li>
             </ul>

@@ -66,15 +66,8 @@
 
                         <li class="level-menu outside"><a class="nav-link" href="#!"><i data-feather="inbox"></i><span>Quick Menu</span></a>
                             <ul class="header-level-menu menu-to-be-close">
-                                <li><a href="file-manager.html" data-original-title="" title=""> <i data-feather="git-pull-request"></i><span>File manager </span></a></li>
-                                <li><a href="#!" data-original-title="" title=""> <i data-feather="users"></i><span>Users</span></a>
-                                    <ul class="header-level-sub-menu">
-                                        <li><a href="file-manager.html" data-original-title="" title=""> <i data-feather="user"></i><span>User Profile</span></a></li>
-                                        <li><a href="file-manager.html" data-original-title="" title=""> <i data-feather="user-minus"></i><span>User Edit</span></a></li>
-                                        <li><a href="file-manager.html" data-original-title="" title=""> <i data-feather="user-check"></i><span>Users Cards</span></a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="social-app.html" data-original-title="" title=""> <i data-feather="zap"></i><span>Social App </span></a></li>
+                                <li><a href="{{ route('student_scholarships') }}" data-original-title="" title=""> <i data-feather="git-pull-request"></i><span>Scholarships </span></a></li>
+                                <li><a href="{{ route('student_profile') }}" data-original-title="" title=""> <i data-feather="user"></i><span>Profile </span></a></li>
                             </ul>
                         </li>
                     </ul>
@@ -95,7 +88,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li> <span class="header-search"><i data-feather="search"></i></span></li>
+                        <!-- <li> <span class="header-search"><i data-feather="search"></i></span></li> -->
                         <li class="onhover-dropdown">
                             <div class="notification-box"><i data-feather="bell"> </i><span class="badge badge-pill badge-secondary">0 </span></div>
                             <ul class="notification-dropdown onhover-show-div">
@@ -110,21 +103,17 @@
                             </ul>
                         </li>
 
-                        <li>
-                            <div class="mode"><i class="fa fa-moon-o"></i></div>
-                        </li>
-
 
                         <li class="maximize"><a class="text-dark" href="#!" onclick="javascript:toggleFullScreen()"><i data-feather="maximize"></i></a></li>
                         <li class="profile-nav onhover-dropdown p-0 mr-0">
                             <div class="media profile-media"><img class="b-r-10" src="https://admin.pixelstrap.com/cuba/assets/images/dashboard/profile.jpg" alt="">
-                                <div class="media-body"><span>Ogbonna Vitalis</span>
+                                <div class="media-body"><span>{{Auth::user()->first_name}} {{Auth::user()->last_name}}</span>
                                     <p class="mb-0 font-roboto">Student <i class="middle fa fa-angle-down"></i></p>
                                 </div>
                             </div>
                             <ul class="profile-dropdown onhover-show-div">
 
-                                <li><a href="#"><i data-feather="user"></i><span>Profile </span></a></li>
+                                <li><a href="{{ route('student_profile') }}"><i data-feather="user"></i><span>Profile </span></a></li>
                                 <li>
                                     <!-- Authentication -->
                                     <form method="POST" action="{{ route('logout') }}">

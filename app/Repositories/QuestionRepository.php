@@ -58,4 +58,11 @@ class QuestionRepository implements QuestionRepositoryInterface
     {
         return Question::find($question_id);
     }
+
+    /**
+     * Get all  questions
+     */
+    public function getAllQuestions(){
+        return Question::all();
+    }
 }

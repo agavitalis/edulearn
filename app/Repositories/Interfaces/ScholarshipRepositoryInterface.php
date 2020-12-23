@@ -52,4 +52,9 @@ interface ScholarshipRepositoryInterface
     * get all my scholarship applications
     */
     public function myApplications($user_id);
+
+    /**
+    * Get all Applications
+    */
+   public function getAllApplications();
 }

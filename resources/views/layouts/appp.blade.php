@@ -288,6 +288,7 @@
                             <li class="active"><a href="/"><i class="fa fa-angle-right"aria-hidden="true"></i>Home</a></li>
                             <li><a href="/about"><i class="fa fa-angle-right" aria-hidden="true"></i>About</a></li>
                             <li><a href="/scholarship"><i class="fa fa-angle-right" aria-hidden="true"></i>Scholarships</a> </li>
+                            <li><a href="/testimonials"><i class="fa fa-angle-right" aria-hidden="true"></i>Testimonials</a> </li>
                             <li><a href="/faq"><i class="fa fa-angle-right" aria-hidden="true"></i>Faqs</a> </li>
                             <li><a href="/team"><i class="fa fa-angle-right" aria-hidden="true"></i>Team</a> </li>
                             <li><a href="/contacts"><i class="fa fa-angle-right" aria-hidden="true"></i>Contacts</a> </li>
@@ -359,17 +360,22 @@
              <!--Courses Menu Star-->
              <li class=""><a href="/team">Team</a>
                 
-                </li>
-                <!--Courses Menu End-->
+            </li>
+            <!--Courses Menu End-->
+             <!--Courses Menu Star-->
+             <li class=""><a href="/testimonials">Testimonials</a>
+                
+            </li>
+            <!--Courses Menu End-->
 
           
             <li><a href="contact.html">Contact<span class="icon"></span></a></li>
         </ul>
-        <div class="search-wrap">
+        <!-- <div class="search-wrap">
             <label class="screen-reader-text">Search for:</label>
             <input type="search" placeholder="Search..." name="s" class="search-input" value="">
             <button type="submit" value="Search"><i class="fa fa-search"></i></button>
-        </div>
+        </div> -->
     </nav>
     <!-- Canvas Menu end -->
 
@@ -417,7 +423,7 @@
     <script src="../appp/js/rsmenu-main.js"></script>
     <!-- plugins js -->
     <script src="../appp/js/plugins.js"></script>
-     <!-- google map js -->
+    <!-- google map js -->
      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgC6ZapXdUzFdeQOFhdm_wucwlDMMQ8CQ"></script>
     <!-- main js -->
     <script src="../appp/js/main.js"></script>

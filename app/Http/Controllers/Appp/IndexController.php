@@ -20,7 +20,7 @@ class IndexController extends Controller
     }
 
     public function scholarships_details(){
-        return view('appp.scholarships_details');
+        return view('appp.scholarships-details');
     }
 
     public function faq(){
@@ -33,5 +33,9 @@ class IndexController extends Controller
 
     public function team(){
         return view('appp.team');
+    }
+
+    public function testimonials(){
+        return view('appp.testimonials');
     }
 }

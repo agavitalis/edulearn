@@ -77,7 +77,7 @@
                                     <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                                 </ul>
                             </div>
-                            <a href="#" class="apply-btn">Apply Now</a>
+                            <a href="/register" class="apply-btn">Join Now</a>
                         </div>
                     </div>
                 </div>
@@ -249,7 +249,7 @@
         <div class="footer-top">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-3 col-md-12">
+                    <div class="col-lg-4 col-md-12">
                         <div class="about-widget">
                             <img src="../appp/images/logo-footer.png" alt="Footer Logo">
                             <p>We create Premium Html Themes for more than three years. Our team goal is to reunite the
@@ -257,8 +257,8 @@
                             <p class="margin-remove">We create Unique and Easy To Use Flexible Html Themes.</p>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-12">
-                        <h5 class="footer-title">RECENT POSTS</h5>
+                    <div class="col-lg-4 col-md-12">
+                        <h5 class="footer-title">RECENT SCHOLARSHIPS</h5>
                         <div class="recent-post-widget">
                             <div class="post-item">
                                 <div class="post-date">
@@ -282,50 +282,19 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-12">
+                    <div class="col-lg-4 col-md-12">
                         <h5 class="footer-title">OUR SITEMAP</h5>
                         <ul class="sitemap-widget">
-                            <li class="active"><a href="index.html"><i class="fa fa-angle-right"
-                                        aria-hidden="true"></i>Home</a></li>
-                            <li><a href="about.html"><i class="fa fa-angle-right" aria-hidden="true"></i>About</a></li>
-                            <li><a href="courses.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Courses</a>
-                            </li>
-                            <li><a href="courses-details.html"><i class="fa fa-angle-right"
-                                        aria-hidden="true"></i>Courses Details</a></li>
-                            <li><a href="events.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Events</a>
-                            </li>
-                            <li><a href="events-details.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Events
-                                    Details</a></li>
-                            <li><a href="blog.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Blog</a></li>
-                            <li><a href="blog-details.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Blog
-                                    Details</a></li>
-                            <li><a href="teachers.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Teachers</a>
-                            </li>
-                            <li><a href="teachers-single.html"><i class="fa fa-angle-right"
-                                        aria-hidden="true"></i>Teachers Details</a></li>
-                            <li><a href="contact.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Contact</a>
-                            </li>
-                            <li><a href="error-404.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Error
-                                    404</a></li>
+                            <li class="active"><a href="/"><i class="fa fa-angle-right"aria-hidden="true"></i>Home</a></li>
+                            <li><a href="/about"><i class="fa fa-angle-right" aria-hidden="true"></i>About</a></li>
+                            <li><a href="/scholarship"><i class="fa fa-angle-right" aria-hidden="true"></i>Scholarships</a> </li>
+                            <li><a href="/faq"><i class="fa fa-angle-right" aria-hidden="true"></i>Faqs</a> </li>
+                            <li><a href="/contacts"><i class="fa fa-angle-right" aria-hidden="true"></i>Contacts</a> </li>
+                           
+                            
                         </ul>
                     </div>
-                    <div class="col-lg-3 col-md-12">
-                        <h3 class="footer-title">FLICKR FEED</h3>
-                        <ul class="flickr-feed">
-                            <li><a href="#"><img src="../appp/images/flickr/1.jpg" alt="Project Image"></a>
-                            </li>
-                            <li><a href="#"><img src="../appp/images/flickr/2.jpg" alt="Project Image"></a>
-                            </li>
-                            <li><a href="#"><img src="../appp/images/flickr/3.jpg" alt="Project Image"></a>
-                            </li>
-                            <li><a href="#"><img src="../appp/images/flickr/4.jpg" alt="Project Image"></a>
-                            </li>
-                            <li><a href="#"><img src="../appp/images/flickr/5.jpg" alt="Project Image"></a>
-                            </li>
-                            <li><a href="#"><img src="../appp/images/flickr/6.jpg" alt="Project Image"></a>
-                            </li>
-                        </ul>
-                    </div>
+                    
                 </div>
                 <div class="footer-share">
                     <ul>
@@ -343,7 +312,7 @@
         <div class="footer-bottom">
             <div class="container">
                 <div class="copyright">
-                    <p>© 2018 <a href="#">RS Theme</a>. All Rights Reserved.</p>
+                    <p>© 2020 <a href="#">Vivvaa</a>. All Rights Reserved.</p>
                 </div>
             </div>
         </div>
@@ -363,75 +332,30 @@
         </div>
         <ul class="sidebarnav_menu list-unstyled main-menu">
             <!--Home Menu Start-->
-            <li class="current-menu-item menu-item-has-children"><a href="#">Home</a>
-                <ul class="list-unstyled">
-                    <li class="sub-nav"><a href="index.html">Home One<span class="icon"></span></a></li>
-                    <li class="sub-nav"><a href="index2.html">Home Two<span class="icon"></span></a></li>
-                    <li class="sub-nav"><a href="index3.html">Home Three<span class="icon"></span></a></li>
-                    <li class="sub-nav active" class="sub-nav"><a href="index4.html">Home Four<span
-                                class="icon"></span></a></li>
-                </ul>
+            <li class="current-menu-item "><a href="/home">Home</a>
+               
             </li>
             <!--Home Menu End-->
 
             <!--About Menu Start-->
-            <li class="menu-item-has-children"><a href="#">About Us</a>
-                <ul class="list-unstyled">
-                    <li class="sub-nav active"><a href="index.html">About One<span class="icon"></span></a></li>
-                    <li class="sub-nav"><a href="index2.html">About Two<span class="icon"></span></a></li>
-                    <li class="sub-nav"><a href="index3.html">About Three<span class="icon"></span></a></li>
-                </ul>
+            <li class=""><a href="/about">About Us</a>
+                
             </li>
             <!--About Menu End-->
 
             <!--Pages Menu Start-->
-            <li class="menu-item-has-children"><a href="#">Pages</a>
-                <ul class="list-unstyled">
-                    <li class="sub-nav active"><a href="teachers.html">Teachers<span class="icon"></span></a></li>
-                    <li class="sub-nav"><a href="teachers-without-filter.html">Teachers Without Filter<span
-                                class="icon"></span></a></li>
-                    <li class="sub-nav"><a href="teachers-single.html">Teachers Single<span class="icon"></span></a>
-                    </li>
-                    <li class="sub-nav"><a href="gallery.html">Gallery One<span class="icon"></span></a></li>
-                    <li class="sub-nav"><a href="gallery2.html">Gallery Two<span class="icon"></span></a></li>
-                    <li class="sub-nav"><a href="gallery3.html">Gallery Three<span class="icon"></span></a></li>
-                    <li class="sub-nav"><a href="shop.html">Shop<span class="icon"></span></a></li>
-                    <li class="sub-nav"><a href="shop-details.html">Shop Details<span class="icon"></span></a></li>
-                    <li class="sub-nav"><a href="cart.html">Cart<span class="icon"></span></a></li>
-                    <li class="sub-nav"><a href="shop.html">Shop<span class="icon"></span></a></li>
-                    <li class="sub-nav"><a href="error-404.html">Error 404<span class="icon"></span></a></li>
-                </ul>
+            <li class=""><a href="/scholarships">Scholarships</a>
+                
             </li>
             <!--Pages Menu End-->
 
             <!--Courses Menu Star-->
-            <li class="menu-item-has-children"><a href="#">Courses</a>
-                <ul class="list-unstyled">
-                    <li class="sub-nav"><a href="courses.html">Courses<span class="icon"></span></a></li>
-                    <li class="sub-nav"><a href="courses2.html">Courses Two<span class="icon"></span></a></li>
-                    <li class="sub-nav"><a href="courses-details.html">Courses Details<span class="icon"></span></a>
-                    </li>
-                </ul>
+            <li class=""><a href="/faq">FAQs</a>
+                
             </li>
             <!--Courses Menu End-->
 
-            <!--Events Menu Star-->
-            <li class="menu-item-has-children"><a href="#">Events</a>
-                <ul class="list-unstyled">
-                    <li class="sub-nav"><a href="events.html">Events<span class="icon"></span></a></li>
-                    <li class="sub-nav"><a href="events-details.html">Events Details<span class="icon"></span></a></li>
-                </ul>
-            </li>
-            <!--Events Menu End-->
-
-            <!--blog Menu Star-->
-            <li class="menu-item-has-children"><a href="#">Blog</a>
-                <ul class="list-unstyled">
-                    <li class="sub-nav"><a href="blog.html">Blog<span class="icon"></span></a></li>
-                    <li class="sub-nav"><a href="blog-details.html">Blog Details<span class="icon"></span></a></li>
-                </ul>
-            </li>
-            <!--blog Menu End-->
+          
             <li><a href="contact.html">Contact<span class="icon"></span></a></li>
         </ul>
         <div class="search-wrap">
@@ -486,6 +410,8 @@
     <script src="../appp/js/rsmenu-main.js"></script>
     <!-- plugins js -->
     <script src="../appp/js/plugins.js"></script>
+     <!-- google map js -->
+     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgC6ZapXdUzFdeQOFhdm_wucwlDMMQ8CQ"></script>
     <!-- main js -->
     <script src="../appp/js/main.js"></script>
 </body>

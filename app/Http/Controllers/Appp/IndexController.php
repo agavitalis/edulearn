@@ -14,4 +14,12 @@ class IndexController extends Controller
     public function about(){
         return view('appp.about');
     }
+
+    public function scholarships(){
+        return view('appp.scholarships');
+    }
+
+    public function contact(){
+        return view('appp.contact');
+    }
 }

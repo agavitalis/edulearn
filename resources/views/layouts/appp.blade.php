@@ -283,7 +283,7 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-12">
-                        <h5 class="footer-title">OUR SITEMAP</h5>
+                        <h5 class="footer-title">QUICK LINKS</h5>
                         <ul class="sitemap-widget">
                             <li class="active"><a href="/"><i class="fa fa-angle-right"aria-hidden="true"></i>Home</a></li>
                             <li><a href="/about"><i class="fa fa-angle-right" aria-hidden="true"></i>About</a></li>

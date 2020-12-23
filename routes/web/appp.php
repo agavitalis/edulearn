@@ -14,3 +14,6 @@ Route::get('/scholarships', [IndexController::class, 'scholarships'])
 
 Route::get('/contact', [IndexController::class, 'contact'])
     ->name('contact');
+
+Route::get('/faq', [IndexController::class, 'faq'])
+    ->name('faq');

@@ -19,6 +19,10 @@ class IndexController extends Controller
         return view('appp.scholarships');
     }
 
+    public function faq(){
+        return view('appp.faq');
+    }
+
     public function contact(){
         return view('appp.contact');
     }

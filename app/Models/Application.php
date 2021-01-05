@@ -12,7 +12,8 @@ class Application extends Model
     protected $fillable = [
         'user_id',
         'scholarship_id',
-        'transaction_ref'
+        'transaction_ref',
+        'total_score'
     ];
 
     /**
@@ -24,11 +25,16 @@ class Application extends Model
     }
 
      /**
-     * Get a profile that belongs to this user.
+     * Get a scholarship that is application is meant for.
      */
     public function scholarship()
     {
         return $this->belongsTo(Scholarship::class);
+    }
+
+    public function written_exams()
+    {
+        return $this->hasMany(WrittenExam::class);
     }
 
 }

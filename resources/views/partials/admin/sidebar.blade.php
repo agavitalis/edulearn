@@ -43,10 +43,10 @@
                     </ul>
                 </li>
                 <li class="sidebar-list">
-                    <a class="sidebar-link sidebar-title" href="#"><i data-feather="edit"></i><span class="lan-3">Applications </span></a>
+                    <a class="sidebar-link sidebar-title" href="#"><i data-feather="edit"></i><span class="lan-3">Applicants</span></a>
                     <ul class="sidebar-submenu">
-                        <li><a class="lan-4" href="#">View Applications</a></li>
-                        <li><a class="lan-4" href="#">Manage Applications</a></li>
+                        <li><a class="lan-4" href="/admin/view-all-applicants">View All Applicants</a></li>
+                        <li><a class="lan-4" href="/admin/view-applicants-form">Manage Applicants</a></li>
                     </ul>
                 </li>
                 <li class="sidebar-main-title">
@@ -65,8 +65,8 @@
                 <li class="sidebar-list">
                     <a class="sidebar-link sidebar-title" href="#"><i data-feather="clipboard"></i><span class="lan-3">Questions </span></a>
                     <ul class="sidebar-submenu">
-                        <li><a class="lan-4" href="upload-questions">Upload Questions</a></li>
-                        <li><a class="lan-5" href="#">Manage Questions</a></li>
+                        <li><a class="lan-4" href="/admin/upload-questions">Upload Questions</a></li>
+                        <li><a class="lan-5" href="/admin/manage-questions">Manage Questions</a></li>
                     </ul>
                 </li>
             </ul>

@@ -61,4 +61,12 @@ class QuestionController extends Controller
             return back()->with('errors', 'A question file was not found');
         }
     }
+
+    public function manage_questions(Request $request){
+
+        if ($request->isMethod('GET')) {
+            $exams = $this->examRepository->getAllExams();
+            return view('admin.question.manage-questions-form', compact('exams'));
+        }
+    }
 }

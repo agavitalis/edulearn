@@ -183,7 +183,7 @@
     <script src="../../backend/js/default.js"></script>
     <script src="../../backend/js/index.js"></script>
 
-    <script src="../../backend/js/ckeditor.js"></script>
+    <script src="https://admin.pixelstrap.com/cuba/assets/js/editor/ckeditor/ckeditor.js"></script>
     <script src="../../backend/js/jquery.js"></script>
     <script src="../../backend/js/styles.js"></script>
     <script src="../../backend/js/ckeditor.custom.js"></script>

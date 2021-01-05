@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\ScholarshipController;
 use App\Http\Controllers\Admin\QuestionController;
 use App\Http\Controllers\Admin\ExamController;
+use App\Http\Controllers\Admin\ApplicantController;
 use Illuminate\Support\Facades\Route;
 
 Route::group(['prefix' => 'admin','namespace'=>"Admin"], function()  
@@ -47,5 +48,17 @@ Route::group(['prefix' => 'admin','namespace'=>"Admin"], function()
     Route::match(['GET','POST'],'/upload-questions', [QuestionController::class, 'upload_questions'])
     ->middleware('auth')
     ->name('upload_questions');
+
+    Route::match(['GET','POST'],'/manage-questions', [QuestionController::class, 'manage_questions'])
+    ->middleware('auth')
+    ->name('manage_questions');
+
+    Route::match(['GET','POST'],'/view-applicants-form', [ApplicantController::class, 'get_all_appllicants_per_scholarship'])
+    ->middleware('auth')
+    ->name('get_all_appllicants_per_scholarship');
+
+    Route::match(['GET','POST'],'/view-all-applicants', [ApplicantController::class, 'get_all_applicants'])
+    ->middleware('auth')
+    ->name('get_all_applicants');
 
 });

@@ -21,4 +21,9 @@ class WrittenExam extends Model
         'is_finished',
         'finish_time',
     ];
+
+    public function application()
+    {
+        return $this->belongsTo(Application::class);
+    }
 }

@@ -18,6 +18,7 @@ class CreateApplicationsTable extends Migration
             $table->bigInteger('user_id');
             $table->bigInteger('scholarship_id');
             $table->string('transaction_ref');
+            $table->string('total_score')->default('0');
             $table->softDeletes();
             $table->timestamps();
         });

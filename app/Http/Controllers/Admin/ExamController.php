@@ -33,13 +33,25 @@ class ExamController extends Controller
 
         $exams = $this->examRepository->getAllExams();
         return view('admin.exam.manage-exams', compact('exams'));
+
     }
 
-    public function exam_details(){
-        return view('admin.exam.exam-details');
+    public function exam_details($exam_id = null){
+
+        $exam = $this->examRepository->getExam($exam_id);
+        return view('admin.exam.exam-details',compact('exam'));
     }
 
-    public function exam_questions(){
-        return view('admin.exam.exam-questions');
+    public function edit_exam(Request $request, $exam_id = null){
+
+        if($request->isMethod('GET')){
+            $exam = $this->examRepository->getExam($exam_id);
+            return view('admin.exam.edit-exams',compact('exam'));
+        }
+
+        $this->examRepository->updateExamDetails($request);
+        return back()->with('success',"Exam Sucessfully Updated");
+       
     }
+
 }

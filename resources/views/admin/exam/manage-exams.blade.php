@@ -60,8 +60,8 @@
                                                                 Actions
                                                             </button>
                                                             <div class="dropdown-menu">
-                                                                <a href="#" class="dropdown-item" title="">View Details</a>
-                                                                <a href="#" class="dropdown-item" title="">Edit Exam Details</a>
+                                                                <a href="/admin/exam-details/{{$exam->id}}" class="dropdown-item" title="">View Details</a>
+                                                                <a href="/admin/edit-exam/{{$exam->id}}" class="dropdown-item" title="">Edit Exam Details</a>
                                                                 <a href="#" class="dropdown-item" title="">View Exam Questions</a>
                                                                 
                                                                 <div class="dropdown-divider"></div>

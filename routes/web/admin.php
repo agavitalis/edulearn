@@ -45,6 +45,10 @@ Route::group(['prefix' => 'admin','namespace'=>"Admin"], function()
     ->middleware('auth')
     ->name('exam_details');
 
+    Route::match(['GET','POST'],'/edit-exam/{id?}', [ExamController::class, 'edit_exam'])
+    ->middleware('auth')
+    ->name('edit_exam');
+
     Route::match(['GET','POST'],'/upload-questions', [QuestionController::class, 'upload_questions'])
     ->middleware('auth')
     ->name('upload_questions');

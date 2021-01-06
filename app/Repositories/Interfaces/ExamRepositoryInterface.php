@@ -28,6 +28,12 @@ interface ExamRepositoryInterface
     public function createExam(Request $request);
 
     /**
+     * Update Exam
+     *@param Request 
+     */
+    public function updateExamDetails(Request $request);
+
+    /**
      * @param $exam_id
      */
     public function getExam($exam_id);

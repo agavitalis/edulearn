@@ -69,4 +69,8 @@ class QuestionController extends Controller
             return view('admin.question.manage-questions-form', compact('exams'));
         }
     }
+
+    public function exam_questions(){
+        return view('admin.exam.exam-questions');
+    }
 }

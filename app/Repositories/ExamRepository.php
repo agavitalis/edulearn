@@ -55,6 +55,20 @@ class ExamRepository implements ExamRepositoryInterface
         return Exam::find($exam_id);
     }
 
+    public function updateExamDetails(Request $request)
+    {
+        $exam = Exam::where(['id'=>$request->exam_id])->update([
+            'name' => $request->name,
+            'duration' => $request->duration,
+            'description' => $request->description,
+            'instruction' => $request->instruction,
+            'number_of_questions' => $request->number_of_questions,
+            'category' => $request->category,
+        ]);
+        return $exam;
+    }
+    
+
     /**
      * @param $exam_id
      */

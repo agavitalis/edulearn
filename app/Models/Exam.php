@@ -16,6 +16,7 @@ class Exam extends Model
         'instruction',
         'category',
         'number_of_questions',
+        'duration',
         'is_active',
     ];
 

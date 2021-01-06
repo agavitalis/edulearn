@@ -35,7 +35,7 @@
                                             <button class="btn btn-primary" type="button">Start Exam</button>
                                         </span>
                                     </h3>
-                                    <p>Endless - United States</p>
+                                    <p>Category - {{$exam->category}}</p>
                                 </div>
                             </div>
                             <div class="job-description">

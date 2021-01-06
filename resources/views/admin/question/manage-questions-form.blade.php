@@ -37,7 +37,7 @@
                                 <div class="col-md-12 mb-3">
                                     <label for="validationCustom01">Select the exam, whose questions you intend to delete or manage?</label>
 
-                                    <select class="form-control" name="exam" required>
+                                    <select class="form-control" name="exam_id" required>
                                         <option value="" selected>Select Exams</option>
                                         @foreach($exams as $exam)
                                         <option value="{{$exam->id}}">{{$exam->name}}</option>
@@ -50,7 +50,7 @@
 
                             <hr>
                             <div class="form-group text-right">
-                                <a href="{{asset('UploadTemplateCBT.xlsx')}}" type="button" class="btn btn-outline-danger" value="">Delete Questions</a>
+                                <button type="button" onclick="confirm('This action will delete all the question assigned to this exam..are you sure?')" class="btn btn-outline-danger mr-3" value="">Delete Questions</a>
                                 <button type="submit" class="btn btn-info" value="">Manage Questions</button>
                             </div>
 

@@ -68,6 +68,9 @@ class QuestionController extends Controller
             $exams = $this->examRepository->getAllExams();
             return view('admin.question.manage-questions-form', compact('exams'));
         }
+
+        $questions = $this->questionRepository->getAllExamQuestions($request->exam_id);
+        return view('admin.question.exam-questions', compact('questions'));
     }
 
     public function exam_questions(){

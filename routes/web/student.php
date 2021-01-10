@@ -61,4 +61,12 @@ Route::group(['prefix' => 'student','namespace'=>"Student"], function()
     ->middleware('auth')
     ->name('student_exam_answer');
 
+    Route::post('/end-exam', [ExaminationController::class, 'end_exam'])
+    ->middleware('auth')
+    ->name('student_end_exam');
+
+    Route::get('/end-exam-success', [ExaminationController::class, 'end_exam_success'])
+    ->middleware('auth')
+    ->name('student_end_exam_success');
+
 });

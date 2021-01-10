@@ -16,8 +16,7 @@ $(document).ready(function() {
                 if (response.code == 200) {
                     //do something with the response here
                 } else if (response.code == 301) {
-                    console.log(response.message);
-                    alert("Opps, Seems something went wrong");
+                    alert("Opps, Seems you are not connected to th internet");
                 }
             },
             errors: function(error) {
@@ -53,4 +52,27 @@ function openPreviousTab() {
 
     $(`#v-pills-tab a[href="#v-pills-${id}"]`).tab("show"); // Select tab by name
     lastId = id;
+}
+
+function  endExam(){
+    $.ajax({
+        type: "post",
+        url: "/student/end-exam",
+        data: {
+            _token: $("input[name=_token]").val(),
+        },
+        success: function(response) {
+            if (response.code == 200) {
+                
+                //redirect to the success page
+                window.location.href = response.redirect_url
+                
+            } else if (response.code == 301) {
+                alert("Opps, Seems you are not connected to th internet");
+            }
+        },
+        errors: function(error) {
+            console.log(error.message);
+        }
+    });
 }

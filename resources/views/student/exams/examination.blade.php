@@ -150,6 +150,7 @@
                                     <div class="mt-md-5 card-footer text-right">
                                         <button class="btn btn-light m-r-15" onclick="openPreviousTab()">Previous</button>
                                         <button class="btn btn-primary" onclick="openNextTab()">Next</button>
+                                        <button class="btn btn-primary " onclick="endExam()">Submit</button>
                                     </div>
                                 </div>
                             </div>
@@ -179,8 +180,10 @@
         document.getElementById("second").innerHTML = seconds;
         if (t < 0) {
             clearInterval(x);
-            document.getElementById("minute").innerHTML = '010';
-            document.getElementById("second").innerHTML = '010';
+            document.getElementById("minute").innerHTML = '00';
+            document.getElementById("second").innerHTML = '00';
+            //end the exam
+            endExam();
         }
     }, 1000);
 </script>

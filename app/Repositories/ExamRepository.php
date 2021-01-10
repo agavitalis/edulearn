@@ -156,17 +156,24 @@ class ExamRepository implements ExamRepositoryInterface
         return $student_answer;
     }
 
-      /**
+    /**
      * @param Request
      */
-    public function endExam(Request $request)
+    public function endExam($written_exam_id)
     {
-        $written_exam_id = session('written_exam_id');
         $end_exam = WrittenExam::where(['id' => $written_exam_id])
         ->update([ 'is_finished' => 1]);
         
         return $end_exam;
     }
 
+    /**
+     * @written_exam_id
+     */
+    public function getWrittenExamDetails($written_exam_id)
+    {
+        $written_exam = WrittenExam::find($written_exam_id);
+        return $written_exam;
+    }
     
 }

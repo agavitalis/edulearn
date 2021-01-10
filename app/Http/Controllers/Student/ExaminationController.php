@@ -85,4 +85,42 @@ class ExaminationController extends Controller
         }
           
     }
+
+    public function end_exam(){
+
+        try {
+            $this->examRepository->endExam(session('written_exam_id'));
+            return response()->json(array(
+                'code'=>200, 
+                'redirect_url'=> "/student/end-exam-success",
+                'message'=>"Exam Successfully Ended"
+            ));
+
+        } catch (Exception $e) {
+            
+            $message = $e->getMessage();
+            return response()->json(array(
+                'code'=> 301,
+                'message'=> $message
+            ));
+        }
+          
+    }
+
+    public function end_exam_success(){
+
+        try {
+
+            $exam = $this->examRepository->getWrittenExamDetails(session('written_exam_id'));
+            return view('student.exams.exam-end-success', compact('exam'));
+
+        } catch (Exception $e) {
+            
+            $message = $e->getMessage();
+            //dd($message)
+        }
+          
+    }
+
+    
 }

@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    
     $(".answerRadio").change(function() {
         let seleted_question_id = $(this).data("id");
         let student_answer = $(this).val();
@@ -26,16 +27,19 @@ $(document).ready(function() {
     });
 });
 
+let lastId;
+
 function openNextTab() {
     let str = $(".tab-pane.active").attr("id");
     let res = str.split("-");
     let id = Number(res[2]) + 1;
-
-    if (id > 4) {
-        id = 4;
+    if(id != lastId){
+        $(`#v-pills-tab a[href="#v-pills-${id}"]`).tab("show"); // Select tab by name
+        lastId = id;
+    }else{
+        alert("Question finished")
     }
-
-    $(`#v-pills-tab a[href="#v-pills-${id}"]`).tab("show"); // Select tab by name
+ 
 }
 
 function openPreviousTab() {
@@ -48,4 +52,5 @@ function openPreviousTab() {
     }
 
     $(`#v-pills-tab a[href="#v-pills-${id}"]`).tab("show"); // Select tab by name
+    lastId = id;
 }

@@ -44,6 +44,7 @@ class ExaminationController extends Controller
         $application_id = session('application_id');
 
         $written_exam = $this->examRepository->getWrittenExam($user_id, $exam_id, $application_id);
+        //dd($written_exam);
         if($written_exam == null){
            
             $written_exam = $this->examRepository->createWrittenExam($user_id, $exam_id, $application_id);

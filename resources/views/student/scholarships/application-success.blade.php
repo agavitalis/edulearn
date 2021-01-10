@@ -105,10 +105,10 @@
                     <table align="center" border="0" cellpadding="0" cellspacing="0">
                         <tbody>
                             <tr>
-                                <td><img src="https://admin.pixelstrap.com/cuba/assets/images/email-template/delivery.png" alt="" style="margin-bottom: 30px;"></td>
+                                <td><img src="../../backend/img/student.png" alt="" style="margin-bottom: 30px;"></td>
                             </tr>
                             <tr>
-                                <td><img src="https://admin.pixelstrap.com/cuba/assets/images/email-template/success.png" alt=""></td>
+                                <td><img src="../../backend/img/success.png" alt=""></td>
                             </tr>
                             <tr>
                                 <td>
@@ -117,8 +117,8 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <p>Your Scholarship application for Rochas International Scheme was successfully processed. Below is your application details:</p>
-                                    <h2 class="title">Ref Number: A234-3454-2344</h2>
+                                    <p>Your Scholarship application for {{$application->scholarship->name}} Scheme was successfully processed. Below is your application details:</p>
+                                    <h2 class="title">Ref Number: {{$application->transaction_ref}}</h2>
 
                                 </td>
                             </tr>
@@ -149,27 +149,27 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <h3 style="padding:5px;">Rochas Okorocha </h3>
+                                    <h3 style="padding:5px;">{{$application->scholarship->name}}</h3>
                                 </td>
                                 <td valign="center" style="padding:5px;">
-                                    University
+                                    {{$application->scholarship->category}}
                                 </td>
                                 <td valign="center" style="padding:5px;">
-                                    12th May, 2020
+                                    {{$application->scholarship->start_date}}
                                 </td>
                                 <td valign="center" style="padding:5px;">
-                                    12th June 2020
+                                    {{$application->scholarship->end_date}}
                                 </td>
                             </tr>
 
                             <tr>
                                 <td colspan="2" style="line-height: 49px;font-size: 13px;color: #000000;padding-left: 20px;text-align:left;border-right: unset;">Application Fee:</td>
-                                <td class="price" colspan="3" style="line-height: 49px;text-align: right;padding-right: 28px;font-size: 13px;color: #000000;text-align:right;border-left: unset;"><b>NGN 2600.00</b></td>
+                                <td class="price" colspan="3" style="line-height: 49px;text-align: right;padding-right: 28px;font-size: 13px;color: #000000;text-align:right;border-left: unset;"><b>NGN {{$application->scholarship->application_fee}}.00</b></td>
                             </tr>
 
                             <tr>
                                 <td colspan="2" style="line-height: 49px;font-size: 13px;color: #000000;padding-left: 20px;text-align:left;border-right: unset;">TOTAL PAID :</td>
-                                <td class="price" colspan="3" style="line-height: 49px;text-align: right;padding-right: 28px;font-size: 13px;color: #000000;text-align:right;border-left: unset;"><b>NGN 2600.00</b></td>
+                                <td class="price" colspan="3" style="line-height: 49px;text-align: right;padding-right: 28px;font-size: 13px;color: #000000;text-align:right;border-left: unset;"><b>NGN {{$application->scholarship->application_fee}}.00</b></td>
                             </tr>
                         </tbody>
                     </table>
@@ -200,7 +200,7 @@
                                 <td style="font-size: 13px; font-weight: 400; color: #444444; letter-spacing: 0.2px;width: 50%;">
                                 </td>
                                 <td style="font-size: 13px; font-weight: 400; color: #444444; letter-spacing: 0.2px;width: 50%;">
-                                    <button type="button" style="font-size:16px;padding:.5em">Go to My Applications</button>
+                                    <a href="/student/my_applications" type="button" style="font-size:16px;padding:.5em; background-color:#F6F7FB; border: 1px solid black; color: #000">Go to My Applications</a>
                                     <button onClick="printRecipt()" type="button" style="font-size:16px; padding:.5em">Print</button>
                                 </td>
                             </tr>

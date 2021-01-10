@@ -31,5 +31,13 @@ class ApplicantRepository implements ApplicantRepositoryInterface
         return Application::where(['scholarship_id'=>$scholarship_id])->get();
     }
 
+    /**
+     * Get a sholarship applicant
+     */
+    public function getAnApplicant($application_id)
+    {
+        return Application::find($application_id);
+    }
+
     
 }

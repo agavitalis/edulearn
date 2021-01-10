@@ -21,4 +21,9 @@ interface ApplicantRepositoryInterface
      */
     public function getAllAppllicantsPerScholarship($scholarship_id);
 
+    /**
+     * Get a sholarship applicant
+     */
+    public function getAnApplicant($application_id);
+
 }

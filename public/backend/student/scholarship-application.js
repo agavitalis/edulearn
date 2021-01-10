@@ -8,7 +8,7 @@ $(document).ready(function() {
             amount: amount,
             customer_phone: phone,
             currency: "NGN",
-            txref: "Applicant-" + email + "-" + scholarship_id,
+            txref: "App-" + email + "-" + scholarship_id,
             meta: [
                 {
                     metaname: "Scholarship ID",
@@ -40,10 +40,9 @@ $(document).ready(function() {
                             if (response.code == 200) {
                         
                                 $(".success-message").text(response.message);
-
                                 setTimeout(() => {
                                     window.location.href = response.redirect_url
-                                }, 2000);
+                                }, 200);
                                 
                                 
                             } else if (response.code == 301) {
@@ -135,10 +134,6 @@ $(document).ready(function() {
                         setTimeout(() => {
                             locacation.reload();
                         }, 2000);
-
-                        $(".withdrawal-message").text(
-                            "You don't have any active investment"
-                        );
                     }
                 },
                 errors: function(error) {

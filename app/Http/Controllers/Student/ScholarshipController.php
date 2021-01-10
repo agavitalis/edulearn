@@ -7,6 +7,7 @@ use App\Models\Scholarship;
 use Illuminate\Http\Request;
 use App\Repositories\Interfaces\ScholarshipRepositoryInterface;
 use App\Repositories\Interfaces\StudentProfileRepositoryInterface;
+use App\Repositories\Interfaces\ApplicantRepositoryInterface;
 use Illuminate\Support\Facades\Auth;
 use Exception;
 
@@ -14,11 +15,17 @@ class ScholarshipController extends Controller
 {
     private $scholarshipRepository;
     private $studentProfileRepository;
+    private $applicantRepository;
 
-    public function __construct(ScholarshipRepositoryInterface $scholarshipRepository,StudentProfileRepositoryInterface $studentProfileRepository)
+    public function __construct(
+        ScholarshipRepositoryInterface $scholarshipRepository,
+        StudentProfileRepositoryInterface $studentProfileRepository,
+        ApplicantRepositoryInterface $applicantRepository
+    )
     {
         $this->scholarshipRepository = $scholarshipRepository;
         $this->studentProfileRepository = $studentProfileRepository;
+        $this->applicantRepository = $applicantRepository;
     }
 
     public function scholarships(){
@@ -82,7 +89,8 @@ class ScholarshipController extends Controller
 
     public function application_success($application_id){
 
-        return view("student.scholarships.application-success");
+        $application = $this->applicantRepository->getAnApplicant($application_id);
+        return view("student.scholarships.application-success", compact('application'));
     }
 
     public function my_applications(){

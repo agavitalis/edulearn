@@ -23,7 +23,8 @@
         <div class="row">
            
             <div class="col-xl-10 xl-60 offset-1">
-                <div class="card">
+                <div class="card pt-3">
+                    @include('partials.admin.alert')
                     <div class="job-search">
                         <div class="card-body">
                             <div class="media"><img class="img-40 img-fluid m-r-20"
@@ -32,7 +33,7 @@
                                     <h3 class="f-w-600">
                                         <a href="#"> {{$exam->name}}</a>
                                         <span  class="pull-right">
-                                            <button class="btn btn-primary" type="button">Start Exam</button>
+                                            <a href="/student/examination/{{$exam->id}}" type="button" class="btn btn-primary" type="button">Start Exam</a>
                                         </span>
                                     </h3>
                                     <p>Category - {{$exam->category}}</p>
@@ -49,8 +50,8 @@
                             </div>
                            
                             <div class="job-description">
-                                <button class="btn btn-danger" type="button"><span><i class="fa fa-tick"></i></span>
-                                    Go Back</button>
+                                <a href="{{ URL::previous() }}" class="btn btn-danger" type="button"><span><i class="fa fa-tick"></i></span>
+                                    Go Back</a>
                                 <a href="/student/examination/{{$exam->id}}" class="btn btn-primary" type="button">
                                     <span><i  class="fa fa-check"></i></span> Start Exam
                                 </a>

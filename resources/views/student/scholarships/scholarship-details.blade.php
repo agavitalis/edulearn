@@ -23,20 +23,21 @@
     <div class="container-fluid">
         <div class="row">
 
-            <div class="col-xl-10 xl-80 offset-1">
+            <div class="col-xl-10 xl-80 offset-md-1">
                 <div class="card">
                     <div class="job-search">
                         <div class="card-body">
-                        <img class="img-fluid w-100 h-25" height="200"
-                                src="https://admin.pixelstrap.com/cuba/assets/images/faq/learning-1.png"
+                        <div class="text-center">
+                               <img class="img-fluid mx-auto" 
+                                src="../../backend/img/graduation.png"
                                 alt="blog-main">
+                        
+                        </div>
+                       
                             <div class="media mt-5">
                                 <div class="media-body">
                                     <h2 class="f-w-600">
                                         <a href="#">{{$scholarship->name}}</a>
-                                        <span class="pull-right">
-                                            <a href="/student/scholarship-application/{{$scholarship->id}}"  class="btn btn-primary" type="button">Apply for this Scholarship</a>
-                                        </span>
                                     </h2>
                                     <h5>
                                         <a href="#">{{$scholarship->category}} Scholarships</a>
@@ -51,8 +52,8 @@
                             </div>
                             
                             <div class="job-description">
-                                <button class="btn btn-light" type="button"><span><i class="fa fa-back"></i></span>
-                                    Back</button>
+                                <a href="{{ URL::previous() }}" class="btn btn-light" type="button"><span><i class="fa fa-back"></i></span>
+                                    Back</a>
                                 <a href="/student/scholarship-application/{{$scholarship->id}}" class="btn btn-primary" type="button"><span>
                                     <i class="fa fa-check"></i></span>
                                     Apply Now

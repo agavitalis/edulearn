@@ -23,33 +23,46 @@
         <div class="row">
             <div class="col-xl-10 xl-80 offset-1 mt-5">
                 <div class="row">
+                    @php $status  = "Yet to Write"; @endphp
                     @foreach($exams as $exam)
-                    <div class="col-xl-6">
-                        <div class="card">
-                            <div class="blog-box blog-list row">
-                               
-                                <div class="col-sm-12">
-                                    <div class="blog-details p-3">
-                                        <div class="blog-date"><span>{{$exam->name}}</span></div>
-                                        <h6>Category: {{ucfirst($exam->category)}} Scholarships </h6>
-                                        <div class="blog-bottom-content">
-                                            <ul class="blog-social">
-                                                <li>Number of Questions: {{ $exam->number_of_questions }}</li>
-                                                <li>Durations: {{ $exam->duration }} </li>
-                                            </ul>
+
+                        @foreach($written_exams as $written_exam)
+                            @php 
+                                if($exam->id == $written_exam->exam_id){
+                                     $status  = "Written";
+                                 }
+                            @endphp
+                        @endforeach
+                        <div class="col-xl-6">
+                            <div class="card">
+                                <div class="blog-box blog-list row">
+                                
+                                    <div class="col-sm-12">
+                                        <div class="blog-details p-3">
+                                            <div class="blog-date"><span>{{$exam->name}}</span></div>
+                                            <h6>Category: {{ucfirst($exam->category)}} Scholarships </h6>
+                                            <div class="blog-bottom-content">
+                                                <ul class="blog-social">
+                                                    <li>Number of Questions: {{ $exam->number_of_questions }}</li>
+                                                    <li>Durations: {{ $exam->duration }} </li>
+                                                    
+                                                </ul>
+                                                <ul>
+                                                    <li>Status: {{$status}}</li>
+                                                </ul>
+                                                
+                                            </div>
+                                            <hr>
+                                            <div class="job-description">
                                             
-                                        </div>
-                                        <hr>
-                                        <div class="job-description">
-                                           
-                                            <a class="btn btn-primary btn-sm" href="/student/exam-instructions/{{$exam->id}}"><span><i class="fa fa-check"></i></span>
-                                                Read Instuctions</a>
+                                                <a class="btn btn-primary btn-sm" href="/student/exam-instructions/{{$exam->id}}"><span><i class="fa fa-check"></i></span>
+                                                    Read Instuctions</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
                     @endforeach
                 </div>
             </div>

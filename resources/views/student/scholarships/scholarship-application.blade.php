@@ -23,7 +23,7 @@
     <div class="container-fluid">
         <div class="row">
 
-            <div class="col-xl-10 offset-1 xl-80">
+            <div class="col-xl-10 offset-md-1 xl-80">
                 <div class="card">
                     <div class="job-search">
                         <div class="card-body pb-0">
@@ -31,9 +31,6 @@
                                 <div class="media-body">
                                     <h4 class="f-w-600">
                                         <a href="#">{{$scholarship->name}} Application Process</a>
-                                        <span class="pull-right">
-                                            <button class="btn btn-primary" type="submit">Complete Application</button>
-                                        </span>
                                     </h4>
                                     <p>Please update your profile to proceed</p>
                                 </div>
@@ -164,7 +161,7 @@
                             </div>
                         </div>
                         <div class="card-footer text-right">
-                            <input class="btn btn-light" type="reset" value="Cancel">
+                            <a href="{{ URL::previous() }}" class="btn btn-light mr-2" type="reset" >Cancel</a>
                             <button class="btn btn-primary apply" type="button">Complete Application</button>
 
                         </div>

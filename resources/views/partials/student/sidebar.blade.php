@@ -25,7 +25,7 @@
                     </div>
                 </li>
                 <li class="sidebar-list">
-                    <a class="sidebar-link" href="dashboard"><i data-feather="home"></i><span
+                    <a class="sidebar-link" href="/student/dashboard"><i data-feather="home"></i><span
                             class="lan-3">Dashboard </span></a>
                     
                 </li>

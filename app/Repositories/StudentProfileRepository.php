@@ -24,10 +24,10 @@ class StudentProfileRepository implements StudentProfileRepositoryInterface
     public function updateProfile(Request $request)
     {
         //check if the profile have been created before
-        $student_profile = StudentProfile::where(['id'=>$request->id])->first();
+        $student_profile = StudentProfile::where(['user_id'=>$request->user_id])->first();
 
         if($student_profile){
-            StudentProfile::where(['id'=>$request->id])->update([
+            StudentProfile::where(['id'=>$student_profile->id])->update([
                 
                 'phone' => $request->phone,
                 'category' => $request->category,

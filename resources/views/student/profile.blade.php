@@ -24,13 +24,13 @@
         <div class="row">
            
             <div class="col-xl-10 offset-1 xl-80 mt-5">
-                <div class="card">
+                <div class="card pt-3">
                     @include('partials.admin.alert')
                     <div class="job-search">
                         
                         <form class="form theme-form" method="POST" action="{{ route('student_profile') }}">
                             @csrf
-                            <input type="hidden" name="user_id" value="1">
+                            <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
                             <div class="card-body pb-0">
                             
                                 <div class="job-description">
@@ -140,9 +140,8 @@
                                 </div>
                             </div>
                             <div class="card-footer text-right">
-                                <input class="btn btn-light" type="reset" value="Cancel">
+                                <a href="{{ URL::previous()}}" class="btn btn-light mr-2" type="button">Cancel </a>
                                 <button class="btn btn-primary" type="submit">Update MyProfile</button>
-
                             </div>
                         </form>
                     </div>

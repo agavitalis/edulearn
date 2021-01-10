@@ -76,6 +76,11 @@ interface ExamRepositoryInterface
     public function endExam(Request $request);
 
     /**
+     * @param $application_id
+     */
+    public function getWrittenExamsPerApplication($application_id);
+
+    /**
      * Get Written Exam Details
      *@param Request 
      */

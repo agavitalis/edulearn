@@ -27,9 +27,9 @@ class ExaminationController extends Controller
         $application_id = $id[1];
         //set application id as session
         session(['application_id' => $application_id]);
-
         $exams = $this->examRepository->getScholarshipExams($scholarship_id);
-        return view('student.exams.scholarship-exams', compact('exams'));
+        $written_exams = $this->examRepository->getWrittenExamsPerApplication($application_id);
+        return view('student.exams.scholarship-exams', compact('exams','written_exams'));
     }
 
     public function exam_instructions($exam_id= null){
@@ -56,7 +56,7 @@ class ExaminationController extends Controller
 
 
             if($written_exam->is_finished > 0){
-                return back()->with('errors', "This exam have been already been concluded");
+                return back()->with('errors', "You have already written this exam.");
             }
 
             //then get his questions if his time havnt ellapsed and set session

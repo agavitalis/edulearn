@@ -28,7 +28,7 @@
                     <div class="col-xl-12">
                         <div class="card">
                             <div class="blog-box blog-list row">
-                                <div class="col-sm-5"><img class="img-fluid sm-100-w" src="https://admin.pixelstrap.com/cuba/assets/images/faq/1.jpg" alt=""></div>
+                                <div class="col-sm-5"><img class="img-fluid sm-100-w" src="../../backend/img/scholarship.png" alt=""></div>
                                 <div class="col-sm-7">
                                     <div class="blog-details py-3">
                                         <div class="blog-date"><span>{{$scholarship->name}}</span></div>

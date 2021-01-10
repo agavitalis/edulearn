@@ -109,6 +109,21 @@ class ExamRepository implements ExamRepositoryInterface
         return $written_exam;
     }
 
+
+     /**
+     * @param $application_id
+     */
+    public function getWrittenExamsPerApplication($application_id)
+    {
+        $written_exams = WrittenExam::where([
+            'application_id' => $application_id,
+        ])->get();
+
+        return $written_exams;
+    }
+
+    
+
     /**
      * @param $exam_id,$user_id,$written_exam_id
      */
